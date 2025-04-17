@@ -1,0 +1,978 @@
+<!--
+=========================================================
+* Argon Dashboard 3 - v2.1.0
+=========================================================
+
+* Product Page: https://www.creative-tim.com/product/argon-dashboard
+* Copyright 2024 Creative Tim (https://www.creative-tim.com)
+* Licensed under MIT (https://www.creative-tim.com/license)
+* Coded by Creative Tim
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="Halaman administrator." />
+        <meta name="author" content="BASIS-64" />
+        <title>Administrator Dashboard</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Bootstrap icons-->
+        <link rel="stylesheet" href="css/icons.css">
+        <!-- Google / Search Engine Tags -->
+        <meta itemprop="name" content="BASIS-64">
+        <meta itemprop="description" content="Halaman administrator.">
+        <meta itemprop="image" content="https://basis64.pages.dev/assets/img/admin.png">
+        <meta name="keywords" content="basis-64, basis64, basis-64 computer, basis64 computer, computer, komputer, basis64 tools, tools, peralatan basis64, peralatan, translator, translator dayak kenyah, dayak kenyah">
+
+        <!-- Facebook Meta Tags -->
+        <meta property="og:url" content="https://basis64.pages.dev">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="BASIS-64">
+        <meta property="og:description" content="Halaman administrator.">
+        <meta property="og:image" content="https://basis64.pages.dev/assets/img/admin.png">
+
+        <!-- Twitter Meta Tags -->
+        <meta name="twitter:card border" content="summary_large_image">
+        <meta name="twitter:title" content="BASIS-64">
+        <meta name="twitter:description" content="Halaman administrator.">
+        <meta name="twitter:image" content="https://basis64.pages.dev/assets/img/admin.png">
+
+  <!--     Fonts and icons     -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+  <!-- Nucleo Icons -->
+  <link href="https://demos.creative-tim.com/argon-dashboard-pro/assets/css/nucleo-icons.css" rel="stylesheet" />
+  <link href="https://demos.creative-tim.com/argon-dashboard-pro/assets/css/nucleo-svg.css" rel="stylesheet" />
+  <!-- Font Awesome Icons -->
+  <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+  <!-- CSS Files -->
+  <link id="pagestyle" href="./assets/css/argon-dashboard.css?v=2.1.0" rel="stylesheet" />
+</head>
+
+<body class="g-sidenav-show" style="">
+  <div class="sidenav navbar navbar-vertical navbar-expand-xs border-dark fixed-start shadow-lg bg-dark text-white" id="sidenav-main">
+    <div class="sidenav-header">
+      <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
+      <a class="navbar-brand text-white m-0" href="index.html" target="_blank">
+        <img src="./assets/img/logo.png" width="32px" height="32px" class="navbar-brand-img h-100" alt="main_logo"><span class="ms-1 font-weight-bold">BASIS-64</span>
+      </a>
+    </div>
+    <hr class="horizontal text-white mt-0">
+    <div class="collapse navbar-collapse  w-auto h-75 " id="sidenav-collapse-main">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <button class="btn" onclick="showMenu('dashboardLayout');">
+                                    <i class="fa-solid fa-desktop"></i>
+                                    Dashboard
+                                </button>
+                              </li>
+        <li class="nav-item">
+          <button class="btn" onclick="showMenu('logLayout');">
+                                    <i class="fa-solid fa-terminal"></i>
+                                    Log sistem
+                                </button>
+                                
+        </li>
+        <li class="nav-item">                                    
+                                <button class="btn" onclick="showMenu('sessionLayout');">
+                                    <i class="fa-solid fa-users"></i>
+                                    Sesi & login
+                                </button>
+                                
+        </li>
+        <li class="nav-item">
+                                    
+                                <button class="btn" onclick="showMenu('activationLayout');">
+                                    <i class="fa-solid fa-check-to-slot"></i>
+                                    Permintaan
+                                    <span class="badge text-bg-danger text-white ms-2">9</span>
+                                </button>
+        </li>
+        <li class="nav-item mt-3">
+          <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6 text-white">Konfigurasi</h6>
+        </li>
+        <li class="nav-item">
+          <button class="btn" onclick="showMenu('databaseLayout');">
+                                    <i class="fa-solid fa-database"></i>
+                                    Database
+                                </button>
+        </li>
+        <li class="nav-item">
+          <button class="btn" onclick="showMenu('configurationMenuLayout');">
+                                    <i class="fa-solid fa-rectangle-list"></i>
+                                    Konfigurasi menu
+                                </button>
+        </li>
+        <li class="nav-item">
+          <button class="btn" onclick="showMenu('securityLayout');">
+                                    <i class="fa-solid fa-key"></i>
+                                    Keamanan
+                                </button>
+        </li>
+        <li class="nav-item">
+          <button class="btn" onclick="showMenu('kamusKenyahLayout');" hidden>
+                                    <i class="fa-solid fa-language"></i>
+                                    Kamus Dayak Kenyah
+                                </button>
+        </li>
+        
+                                
+                                
+                                
+                                <li class="nav-item mt-3">
+          <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6 text-white">Lainnya</h6>
+        </li>
+        <li class="nav-item">
+          <button class="btn" onclick="adminLogout();">
+                                    <i class="fa-solid fa-right-from-bracket"></i>
+                                    Logout
+                                </button>
+        </li>
+          
+        </li>
+      </ul>
+    </div>
+  </div>
+  <main class="main-content">
+    <!-- Navbar -->
+    <nav class="" id="navbarBlur" data-scroll="false">
+      <div class="container-fluid py-1 px-3">
+        <nav aria-label="breadcrumb border" id="breadcrumb">
+          
+        </nav>
+        <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
+          <ul class="navbar-nav  justify-content-end">
+            <li class="nav-item d-xl-none ps-3 d-flex align-items-center">
+              <a href="javascript:;" class="nav-link text-dark p-0" id="iconNavbarSidenav">
+                
+              </a>
+            </li>
+            
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- End Navbar -->
+    <div class="container-fluid py-4">
+      <main class="mb-5">
+                        <div class="container py-4" id="dashboardLayout">
+                            <div class="card border text-center pt-2 bg-light mb-2">
+                                <h1 class="display-6">Halaman Administrator</h1>
+                                <p>Gunakan Quick Acces di bawah ini</p>
+                            </div>
+
+                            <div class="card border text-center p-4 bg-light">
+                                <div class="row gx-3">
+                                    <div class="col-lg-4 mb-5">
+                                        <div class="card h-100 shadow border-0">
+                                            <div class="ratio ratio-16x9">
+                                                <img class="card-img-top" src="assets/img/cloudflare-background.webp" alt="Cloudflare shortcut" />
+                                            </div>
+                                            <div class="card-body p-4">
+                                                <a class="text-decoration-none link-dark stretched-link" href="#!"><h5 class="card-title mb-3">Cloudflare</h5></a>
+                                                <p class="card-text mb-0">Buka dashboard Cloudflare di sini untuk mengakses Cloudflare Workers dan KV.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 mb-5">
+                                        <div class="card border h-100 shadow border-0">
+                                            <div class="ratio ratio-16x9">
+                                                <img class="card-img-top" src="assets/img/github-background.webp" alt="GitHub shortcut" />
+                                            </div>
+                                            <div class="card-body p-4">
+                                                <a class="text-decoration-none link-dark stretched-link" href="#!"><h5 class="card-title mb-3">Github</h5></a>
+                                                <p class="card-text mb-0">Buka dashboard GitHub BASIS-64 Tools di sini untuk meng-update website ini.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 mb-5">
+                                        <div class="card border h-100 shadow border-0">
+                                            <div class="ratio ratio-16x9">
+                                                <img class="card-img-top" src="assets/img/security-background.jpg" alt="Login and session shortcut" />
+                                            </div>
+                                            <div class="card-body p-4">
+                                                <a class="text-decoration-none link-dark stretched-link" href="#!" onclick="showMenu('sessionLayout');"><h5 class="card-title mb-3">Sesi & Login</h5></a>
+                                                <p class="card-text mb-0">Lihat aktivitas login dan sesi pengguna.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                        
+                        
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="container py-4" id="logLayout" hidden>
+                            <div class="card border">
+                                <div class="card-header d-flex justify-content-between align-items-center">
+                                    <div class="d-flex flex-row">
+                                        <i class="fa-solid fa-terminal"></i>
+                                        &nbsp;System Log
+                                    </div>
+                                    <div class="d-flex flex-row-reverse">
+                                        <button class="btn btn-outline-dark" onclick="navigator.clipboard.writeText(document.getElementById('systemLogText').value); $('#copiedModal').modal('show')">
+                                            <i class="fa-solid fa-copy"></i>
+                                            &nbsp;Copy
+                                        </button>
+                                    </div>
+                                </div>
+                                <textarea class="card-body bg-dark border-0 text-light font-monospace vh-80" id="systemLogText" rows="20" style="resize: none;" readonly>
+                                </textarea>
+                                <div class="card-footer bg-dark font-monospace text-light border-top border-top-light d-flex" id="systemLogStatus">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="container py-4" id="sessionLayout" hidden>
+                            <div class="card border mb-4">
+                                <div class="card-header">
+                                    <i class="fa-solid fa-users"></i>
+                                    &nbsp; Sesi & Login
+                                </div>
+                                <div class="card-body">
+                                    <table id="sessionTable">
+                                        <thead>
+                                            <th>No</th>
+                                            <th>Photo</th>
+                                            <th>Pengguna</th>
+                                            <th>Sesi</th>
+                                            <th>Perangkat</th>
+                                        </thead>
+                                        <tbody id="sessionTableBody">
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div class="card border">
+                                <div class="card-header">
+                                    <i class="fa-solid fa-sliders"></i>
+                                    &nbsp; Pengaturan Lainnya
+                                </div>
+                                <div class="card-body">
+                                    <div class="form-group">
+                                        <label for="inputBannedEmail">Blokir akses email ke website ini.</label>
+                                        <input type="text" class="form-control" id="inputBannedEmail" aria-describedby="emailHelp" placeholder="Email yang akan di-ban">
+                                        <small id="emailHelp" class="form-text text-muted">Karakter "," akan digunakan sebagai pemisah.</small>
+                                    </div>
+                                    <hr/>
+                                    <div class="form-group">
+                                        <label for="inputBannedDevice">Blokir akses perangkat ke website ini.</label>
+                                        <input type="text" class="form-control" id="inputBannedDevice" aria-describedby="deviceHelp" placeholder="ID perangkat yang akan di-ban">
+                                        <small id="deviceHelp" class="form-text text-muted">Karakter "," akan digunakan sebagai pemisah.</small>
+                                    </div>
+                                    <hr/>
+                                    <div class="form-group">
+                                        <label for="inputBannedUserAgent">Blokir akses user agent ke website ini.</label>
+                                        <input type="text" class="form-control" id="inputBannedUserAgent" aria-describedby="help" placeholder="User agent perangkat yang akan di-ban">
+                                        <small id="help" class="form-text text-muted">Karakter "," akan digunakan sebagai pemisah.</small>
+                                    </div>
+                                    <hr/>
+                                    <div class="d-flex justify-content-end">
+                                        <button class="btn btn-primary justify-content-end" onclick="confirmChanges(saveSessionConfiguration);">Simpan Konfigurasi</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="container py-4" id="activationLayout" hidden>
+                            <div class="card mb-4">
+                                <div class="card-header">
+                                    <i class="fa-solid fa-check-to-slot"></i>
+                                    &nbsp; Permintaan Aktivasi
+                                </div>
+                                <div class="card-body">
+                                    <table id="requestTable">
+                                        <thead>
+                                            <th>No</th>
+                                            <th>Nama</th>
+                                            <th>Email</th>
+                                            <th>Paket</th>
+                                            <th>Waktu Pembayaran</th>
+                                            <th>Lainnya</th>
+                                        </thead>
+                                        <tbody id="requestTableBody">
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Rusdi Ngawi Tukang Cukur Tampan</td>
+                                                <td>rusdingawitukangcukur123@gmail.com</td>
+                                                <td>Paket Hemat (Rp5.000/minggu)</td>
+                                                <td>Selasa, 18 Maret 2025 - 07:30:54</td>
+                                                <td>
+                                                    <button class="btn btn-success btn-sm">Aktivasi</button>
+                                                    <button class="btn btn-danger btn-sm">Hapus</button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="container py-4" id="databaseLayout" hidden>
+                            <div class="card border mb-4">
+                                <div class="card-header">
+                                    <i class="fa-solid fa-database"></i>
+                                    &nbsp; Database Pengguna
+                                </div>
+                                <div class="card-body">
+                                    <table id="databaseTable">
+                                        <thead>
+                                            <tr>
+                                                <th>No</th>
+                                                <th>Email Pengguna</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="databaseTableBody">
+                                            
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="container py-4" id="configurationMenuLayout" hidden>
+                            <div class="card border">
+                                <div class="card-header d-flex justify-content-between align-items-center">
+                                    <div class="d-flex flex-row">
+                                        <i class="fa-solid fa-code"></i>
+                                        &nbsp;Konfigurasi Menu
+                                    </div>
+                                    <div class="d-flex flex-row-reverse">
+                                        <button class="btn btn-outline-dark" onclick="navigator.clipboard.writeText(document.getElementById('configurationMenuLayout').value); $('#copiedModal').modal('show')">
+                                            <i class="fa-solid fa-copy"></i>
+                                            &nbsp;Copy
+                                        </button>
+                                        <button class="btn btn-primary" onclick="navigator.clipboard.writeText(document.getElementById('configurationMenuLayout').value); $('#copiedModal').modal('show')">
+                                            <i class="fa-solid fa-copy"></i>
+                                            &nbsp;Copy
+                                        </button>
+                                    </div>
+                                </div>
+                                <textarea class="card-body border-0 font-monospace vh-80 m-2" id="configurationMenuText" rows="20" style="resize: none;"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="container py-4" id="securityLayout" hidden>
+                            <div class="card border">
+                                <div class="card-header">
+                                    <i class="fa-solid fa-user-tie"></i>
+                                    &nbsp; Pengaturan Administrator
+                                </div>
+                                <div class="card-body">
+                                    <label>Pengaturan admin 1</label>
+                                    <div class="input-group mb-1">
+                                      <span class="input-group-text bg-light border-end" id="basic-addon1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-badge-fill" viewBox="0 0 16 16">
+  <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2zm4.5 0a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1zM8 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6m5 2.755C12.146 12.825 10.623 12 8 12s-4.146.826-5 1.755V14a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1z"/>
+</svg></i></span>
+                                      <input type="text" class="form-control px-1" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" id="inputAdminUsername1">
+                                    </div>
+                                    <div class="input-group mb-3">
+                                      <span class="input-group-text bg-light border-end" id="basic-addon1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-key-fill" viewBox="0 0 16 16">
+  <path d="M3.5 11.5a3.5 3.5 0 1 1 3.163-5H14L15.5 8 14 9.5l-1-1-1 1-1-1-1 1-1-1-1 1H6.663a3.5 3.5 0 0 1-3.163 2M2.5 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2"/>
+</svg></span>
+                                      <input type="password" class="form-control px-1" placeholder="Kata sandi" aria-label="Kata sandi" aria-describedby="basic-addon1" id="inputAdminPassword1">
+                                    </div>
+                                    <hr/>
+                                    <label>Pengaturan admin 2</label>
+                                    <div class="input-group mb-1">
+                                      <span class="input-group-text bg-light border-end" id="basic-addon1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-badge-fill" viewBox="0 0 16 16">
+  <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2zm4.5 0a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1zM8 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6m5 2.755C12.146 12.825 10.623 12 8 12s-4.146.826-5 1.755V14a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1z"/>
+</svg></i></span>
+                                      <input type="text" class="form-control px-1" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" id="inputAdminUsername2">
+                                    </div>
+                                    <div class="input-group mb-3">
+                                      <span class="input-group-text bg-light border-end" id="basic-addon1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-key-fill" viewBox="0 0 16 16">
+  <path d="M3.5 11.5a3.5 3.5 0 1 1 3.163-5H14L15.5 8 14 9.5l-1-1-1 1-1-1-1 1-1-1-1 1H6.663a3.5 3.5 0 0 1-3.163 2M2.5 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2"/>
+</svg></span>
+                                      <input type="password" class="form-control px-1" placeholder="Kata sandi" aria-label="Kata sandi" aria-describedby="basic-addon1" id="inputAdminPassword2">
+                                    </div>
+                                    <hr/>
+                                    <div class="d-flex justify-content-end">
+                                        <button class="btn btn-primary justify-content-end" onclick="confirmChanges(saveSecurityConfiguration);">Simpan Konfigurasi</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="container py-4" id="kamusKenyahLayout" hidden>
+                            <div class="card border mb-1">
+                                <div class="card-header d-flex justify-content-between align-items-center">
+                                    <div class="d-flex flex-row">
+                                        <i class="fa-solid fa-code"></i>
+                                        &nbsp;Kamus Dayak Kenyah (JSON)
+                                    </div>
+                                    <div class="d-flex flex-row-reverse">
+                                        <button class="btn btn-outline-dark" onclick="navigator.clipboard.writeText(document.getElementById('systemLogText').value); $('#copiedModal').modal('show')">
+                                            <i class="fa-solid fa-copy"></i>
+                                            &nbsp;Copy
+                                        </button>
+                                    </div>
+                                </div>
+                                <textarea class="card-body font-monospace vh-80 m-2" id="systemLogText" rows="20" style="resize: none;"></textarea>
+                                <div class="card border text-white bg-danger m-2" id="dictionaryError">
+                                  <div class="card-header d-flex justify-content-between align-items-center">
+                                    <div class="d-flex flex-row">Dictionary Error</div>
+                                    <div class="d-flex flex-row-reverse">
+                                        <button class="btn btn-outline-light" onclick="document.getElementById('dictionaryError').hidden = true;">
+                                            <i class="bi bi-x-lg"></i>
+                                        </button>
+                                    </div></div>
+                                  <div class="card-body">
+                                    <h5 class="card-title">Invalid JSON!</h5>
+                                    <p class="card-text">JSON.parse: expected property name or '}' at line 1 column 2 of the JSON data</p>
+                                  </div>
+                                </div>
+                            </div>
+
+                            <div class="card border mb-1">
+                                <div class="card-header d-flex justify-content-between align-items-center">
+                                    <div class="d-flex flex-row">
+                                        <i class="fa-solid fa-code"></i>
+                                        &nbsp;Dataset tambahan
+                                    </div>
+                                    <div class="d-flex flex-row-reverse">
+                                        <button class="btn btn-outline-dark" onclick="navigator.clipboard.writeText(document.getElementById('systemLogText').value); $('#copiedModal').modal('show')">
+                                            <i class="fa-solid fa-copy"></i>
+                                            &nbsp;Copy
+                                        </button>
+                                    </div>
+                                </div>
+                                <textarea class="card-body font-monospace vh-80 m-2" id="systemLogText" rows="20" style="resize: none;"></textarea>
+                                <div class="card border text-white bg-danger m-2" id="datasetError">
+                                  <div class="card-header d-flex justify-content-between align-items-center">
+                                    <div class="d-flex flex-row">Dataset Error</div>
+                                    <div class="d-flex flex-row-reverse">
+                                        <button class="btn btn-outline-light" onclick="document.getElementById('datasetError').hidden = true;">
+                                            <i class="bi bi-x-lg"></i>
+                                        </button>
+                                    </div></div>
+                                  <div class="card-body">
+                                    <h5 class="card-title">Invalid JSON!</h5>
+                                    <p class="card-text">JSON.parse: expected property name or '}' at line 1 column 2 of the JSON data</p>
+                                  </div>
+                                </div>
+                            </div>
+                            <div class="card border">
+                                <div class="card-header">
+                                    <i class="fa-solid fa-elipsis-vertical"></i>
+                                        &nbsp;Lainnya
+                                </div>
+                                <div class="card-body d-flex justify-content-between align-items-center">
+                                    <div class="d-flex flex-row">
+                                        Simpan konfigurasi
+                                    </div>
+                                    <div class="d-flex flex-row-reverse">
+                                        <button class="btn btn-primary" onclick="navigator.clipboard.writeText(document.getElementById('systemLogText').value); $('#copiedModal').modal('show')">
+                                            <i class="bi bi-floppy2-fill"></i>
+                                            &nbsp;Simpan
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </main>
+      
+      <div id="modals">
+        <!-- User Not Activated Dialog modal -->
+                    <div id="accountNotActivatedDialogModal" class="modal fade" tabindex="-1">
+                      <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title">Aktivasi Akun</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                            <p id="accountNotActivatedDialogModalMessage"></p>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Tutup</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Copied modal -->
+                    <div id="copiedModal" class="modal fade" tabindex="-1">
+                      <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title">Message</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                            <p>Teks disalin.</p>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Tutup</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Edit user modal -->
+                    <div id="editUserModal" class="modal modal-lg fade" tabindex="-1">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Edit Pengguna</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body d-xl-flex justify-content-xl-start justify-content-sm-center gap-2">
+                                    <div class="text-center mb-2">
+                                        <img src="assets/img/user.png" id="userEditPhoto" class="img-thumbnail" width="200px" height="200px" />
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <input type="name" class="form-control mb-2" id="userEditName" placeholder="name" readonly>
+                                        <input type="email" class="form-control mb-2" id="userEditEmail" placeholder="email" readonly>
+                                        <select id="userEditActivationLevel" class="form-select mb-2" aria-label=".form-select-lg example">
+                                            <option value="0" selected>0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                        </select>
+                                        <input id="userEditActivationDate" class="form-control mb-2" type="date" />
+                                        <div class="d-flex-inline text-center text-xl-end">
+                                            <button type="button" class="btn btn-danger" onclick="confirmChanges(deleteAdminAccount); $('#editUserModal').modal('hide');">Hapus Akun</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Tutup</button>
+                                    <button type="button" class="btn btn-primary" onclick="activate();">Simpan</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="confirmModal" tabindex="-1" aria-labelledby="confirmModalLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="confirmModalLabel">Simpan</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                            Apakah Anda ingin menyimpan?
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                            <button type="button" class="btn btn-primary" onclick="saveButton();">Simpan</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="modal fade" id="configurationSavedModal" tabindex="-1" aria-labelledby="configurationSavedModalLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="configurationSavedModalLabel">Info</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                            Konfigurasi tersimpan.
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="modal fade" id="configurationFailedModal" tabindex="-1" aria-labelledby="configurationSavedModalLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="configurationSavedModalLabel">Info</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                            Tidak dapat menyimpan konfigurasi.
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="infoModalLabel">Info</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body" id="modalMessage">
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Loading Modal -->
+                    <div class="modal fade" id="loadingModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="loadingModalLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content text-center">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="loadingModalLabel">Loading</h5>
+                          </div>
+                          <div class="modal-body d-flex justify-content-center align-items-center gap-3">
+                            <div class="spinner-border text-primary" role="status" aria-hidden="true"></div>
+                            <strong>Loading...</strong>
+                          </div>
+                          <!-- Optional: remove modal-footer if not needed -->
+                        </div>
+                      </div>
+                    </div>
+
+      </div>
+      <footer class="footer pt-3  " id="footer">
+        
+      </footer>
+    </div>
+  </main>
+  
+  <!--   Core JS Files   -->
+  <script src="./assets/js/core/popper.min.js"></script>
+  <script src="./assets/js/core/bootstrap.min.js"></script>
+  <script src="./assets/js/plugins/perfect-scrollbar.min.js"></script>
+  <script src="./assets/js/plugins/smooth-scrollbar.min.js"></script>
+  <script src="./assets/js/plugins/chartjs.min.js"></script>
+  <script src="https://basis64computer.github.io/basis64-website/js/feedback.js"></script>
+        <script src="js/jquery.min.js" type="text/javascript"></script>
+        <script src="js/linedtextarea.js"></script>
+        <link href="css/linedtextarea.css" type="text/css" rel="stylesheet"/>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <script src="js/icons.js"></script>
+        <script src="js/cookie.js"></script>
+        <script src="js/visitor.js"></script>
+        <script src="js/encrypt.js"></script>
+        <script src="js/initialize.js"></script>
+  <script>
+  </script>
+  <script>
+                    let page_id = "admin";
+            isAdminPage = true;
+            const dashboardLayout = document.getElementById('dashboardLayout');
+            const logLayout = document.getElementById('logLayout');
+            const sessionLayout = document.getElementById('sessionLayout');
+            const activationLayout = document.getElementById('activationLayout');
+
+            const databaseLayout = document.getElementById('databaseLayout');
+            const configurationMenuLayout = document.getElementById('configurationMenuLayout');
+            const securityLayout = document.getElementById('securityLayout');
+            const kamusKenyahLayout = document.getElementById('kamusKenyahLayout');
+
+            /*
+             * Tabel pada layout sesi dan login
+             */
+            const sessionTable = document.getElementById("sessionTable");
+            const sessionTableBody = document.getElementById("sessionTableBody");
+            const inputBannedEmail = document.getElementById("inputBannedEmail");
+            const inputBannedDevice = document.getElementById("inputBannedDevice");
+            const inputBannedUserAgent = document.getElementById("inputBannedUserAgent");
+
+            const requestTable = document.getElementById("requestTable");
+            const requestTableBody = document.getElementById("requestTableBody");
+
+            const userEditName = document.getElementById("userEditName");
+            const userEditEmail = document.getElementById("userEditEmail");
+            const userEditPhoto = document.getElementById("userEditPhoto");
+                const userEditActivationDate = document.getElementById("userEditActivationDate");
+
+            const inputAdminUsername1 = document.getElementById('inputAdminUsername1');
+            const inputAdminUsername2 = document.getElementById('inputAdminUsername2');
+            const inputAdminPassword1 = document.getElementById('inputAdminPassword1');
+            const inputAdminPassword2 = document.getElementById('inputAdminPassword2');
+
+            new simpleDatatables.DataTable(requestTable);
+
+            let confirmationCallback;
+
+            async function saveButton() {
+                 $('#confirmModal').modal('hide');
+                 await confirmationCallback();
+                 $('#configurationSavedModal').modal('show');
+            }
+
+            function message(text) {
+              document.getElementById('modalMessage').innerHTML = text;
+              $('#infoModal').modal('show');
+            }
+
+            function hideAll() {
+                dashboardLayout.hidden = true;
+                logLayout.hidden = true;
+                sessionLayout.hidden = true;
+                activationLayout.hidden = true;
+
+                databaseLayout.hidden = true;
+                configurationMenuLayout.hidden = true;
+                securityLayout.hidden = true;
+                kamusKenyahLayout.hidden = true;
+            }
+
+            function showMenu(menu) {
+                hideAll();
+                document.getElementById(menu).hidden = false;
+            }
+
+            /*
+             * Menambahkan baris pada table
+             */
+            function insertRow(tableBody, tableData) {
+                let columns = "";
+                for (var i = 0; i < tableData.length; i++) {
+                    columns += `<td>${tableData[i]}</td>`;
+                }
+                tableBody.innerHTML += `<tr>${columns}</tr>`;
+            }
+
+
+
+            /*
+             * Loop untuk system log
+             */
+            async function systemLogLoop() {
+                const systemLogStatus = document.getElementById("systemLogStatus");
+                const systemLogText = document.getElementById("systemLogText");
+                if (logLayout.hidden) {
+                    console.log(systemLogStatus);
+                    systemLogText.value = "";
+                    systemLogStatus.hidden = true;
+                    return;
+                }
+                systemLogStatus.hidden = false;
+                systemLogStatus.innerHTML = `Fetching data... 
+                                        <div class="ms-2 spinner-border spinner-border-sm" role="status">
+                                            <span class="sr-only">Loading...</span>
+                                        </div>`;
+                let response = await fetch("https://api.npoint.io/1ccb378facadf1e40ee0");
+                let json = await response.json();
+                systemLogText.value = await decryptAES(adminData.serverKey, json.ciphertext, adminData.serverIV);
+                systemLogStatus.innerHTML = 'System log loaded';
+            }
+
+            /*
+             * Fungsi pada layout sesi dan login
+             */
+            function initializeSessionLayout() {
+                console.log(adminData);
+
+                /*
+                 * Memuat tabel
+                 */
+                let sessionKeys = Object.keys(adminData.session);
+                for (var i = 0; i < sessionKeys.length; i++) {
+                    let data = adminData.session[sessionKeys[i]];
+                    let user = data.account;
+                    let photo = (user)?user.photo:null;
+                    let device = data.device;
+                    let emailColumn = user?`Email: ${user.email}<br/>Nama: ${user.name}`:'Pengguna tidak melakukan login';
+                    let sessionColumn = `Session ID: ${sessionKeys[i]}<br/>Awal sesi: ${formatDate(new Date(data.expired - (24*3600*1000)), "dddd, dd MMMM yyyy - HH:mm:ss")}<br/>Akhir sesi: ${formatDate(new Date(data.expired), "dddd, dd MMMM yyyy - HH:mm:ss")}`;
+                    let deviceColumn = device?(`Device ID: ${device.id?device.id:"N/a"}<br/>IP Address: ${device.ip}<br/>Region: ${device.city}, ${device.region}, ${device.country}<br/>User agent: ${device.userAgent}`):"N/a";
+                    insertRow(sessionTableBody, [i+1, `<img class="rounded ratio ratio 1x1" src="${photo?photo:'assets/img/user.png'}" style="width: 128px"/>`, emailColumn, sessionColumn, deviceColumn]);
+                }
+                //insertRow(sessionTableBody, [1, `Email: rusdingawitukangcukur123@gmail.com<br/>Nama: Rusdi Ngawi Tukang Cukur Tampan`, `Session ID: rusdingawitukangcukur123<br/>Awal sesi: Selasa, 18 Maret 2025 - 07:30:54<br/>Akhir sesi: Rabu, 19 Maret 2025 - 07:30:54<br/><br/>`, `Device ID: PC-1234567890<br/>IP address: 10.92.100.124<br/>Region: Ngawi, East Java, ID<br/>User agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36`])
+                new simpleDatatables.DataTable(sessionTable);
+
+                inputBannedEmail.value = adminData.config.sessionConfig.bannedEmail;
+                inputBannedDevice.value = adminData.config.sessionConfig.bannedDevice;
+                inputBannedUserAgent.value = adminData.config.sessionConfig.bannedUserAgent;
+
+
+                /*
+                 * Memuat konfigurasi lainnya
+                 */ 
+            }
+
+             /*
+             * Fungsi pada layout sesi dan login
+             */
+            function initializeSecurity() {
+                inputAdminUsername1.value = adminData.config.securityConfig.admin1.username;
+                inputAdminPassword1.value = adminData.config.securityConfig.admin1.password;
+
+                inputAdminUsername2.value = adminData.config.securityConfig.admin2.username;
+                inputAdminPassword2.value = adminData.config.securityConfig.admin2.password;
+            }
+
+            function confirmChanges(callback) {
+                $("#confirmModal").modal("show");
+                confirmationCallback = callback;
+            }
+
+            async function saveSessionConfiguration() {
+                adminData.config.sessionConfig.bannedEmail = inputBannedEmail.value;
+                adminData.config.sessionConfig.bannedDevice = inputBannedDevice.value;
+                adminData.config.sessionConfig.bannedUserAgent = inputBannedUserAgent.value;
+
+                /*console.log("gigger nigger");
+
+                let response = await fetch("https://api.npoint.io/0e55db6aaa859e7f4764");
+                let json = await response.json();
+                console.log(json);*/
+
+                saveConfiguration();
+            }
+
+            async function saveSecurityConfiguration() {
+                adminData.config.securityConfig.admin1.username = inputAdminUsername1.value;
+                adminData.config.securityConfig.admin1.password = inputAdminPassword1.value;
+
+                adminData.config.securityConfig.admin2.username = inputAdminUsername2.value;
+                adminData.config.securityConfig.admin2.password = inputAdminPassword2.value;
+
+                saveConfiguration();
+            }
+
+            /*
+             * Fungsi pada layout database
+             */
+            async function initializeDatabaseLayout() {
+                let databaseTable = document.getElementById("databaseTable");
+                let json = adminData.accountList;
+                json = json.filter(e => e !== 'last_id');
+                json = json.filter(e => e !== 'premium_pages');
+
+                console.log(json.length);
+                var j = 1;
+                for (var i = 0; i<json.length; i++) {
+                    name = json[i].name;
+                    if (isEmail(name)) {
+                        addTable(j, name);
+                        j++;
+                    }
+                }
+                new simpleDatatables.DataTable(databaseTable);
+            }
+
+
+            async function deleteAdminAccount() {
+              //console.log(userEditEmail.value.trim());
+                let response = await serverRequest('remove-account', {email: userEditEmail.value.trim()});
+                if (!response.ok) {
+                    message('Tidak dapat menghapus akun pengguna.<br/>Error: ' + JSON.stringify(response.json));
+                } else {
+                    window.location.reload();
+                }
+            }
+
+            function addTable(number, name) {
+                let databaseTableBody = document.getElementById("databaseTableBody")
+                let tr = document.createElement("tr");
+                //tr.setAttribute("onclick", "console.log('asdf')");
+                console.log("add: " + number + " " + name)
+                let td = document.createElement("td");
+                td.innerHTML = number;
+                tr.appendChild(td);
+                let td2 = document.createElement("td");
+                td2.innerHTML = `<button class="btn shadow-none text-start" style="width: 100%;" onclick="editUser('` + name + `')">` + name + `</button>`;
+                tr.appendChild(td2);
+                databaseTableBody.appendChild(tr);
+            }
+
+            function formatTimestampToDate(timestamp) {
+                const date = new Date(timestamp); // Create a Date object from the timestamp
+                const year = date.getFullYear(); // Get the year
+                const month = String(date.getMonth() + 1).padStart(2, '0'); // Get the month (0-11), add 1, and pad with 0 if needed
+                const day = String(date.getDate()).padStart(2, '0'); // Get the day and pad with 0 if needed
+
+                return `${year}-${month}-${day}`; // Format as YYYY-MM-DD
+            }
+
+            function convertDateToTimestamp(dateString) {
+                // Create a Date object from the date string
+                const date = new Date(dateString);
+                
+                // Get the timestamp in milliseconds
+                const timestamp = date.getTime();
+                
+                return timestamp; // Returns the timestamp
+            }
+
+            async function editUser(user) {
+                let resultjson = await serverRequest('get-user', {email: user});
+                let account = resultjson.data;
+                console.log(account);
+
+                
+
+                userEditName.value = account.name;
+                userEditEmail.value = account.email;
+                userEditPhoto.src = account.photo.replace("s96-c", "s384-c", true);
+                console.log(account);
+                //userLevel.value = "2";
+                $('#userEditActivationLevel').val('2');
+                userEditActivationDate.value = formatTimestampToDate(account.activation_expired);
+                $('#editUserModal').modal('show');
+                console.log(parseInt(document.getElementById("userEditActivationLevel").value));
+            }
+
+            async function activate() {
+                let response = await serverRequest("activate", {email: userEditEmail.value, activation_level: parseInt(document.getElementById("userEditActivationLevel").value), timestamp: convertDateToTimestamp(userEditActivationDate.value)});
+                $('#editUserModal').modal('hide');
+                console.log(response);
+                if (response.ok) {
+                  message('Berhasil mengaktivasi pengguna.');
+                } else {
+                  message('Tidak dapat mengaktivasi pengguna.');
+                }
+            }
+
+
+
+            async function initializeAdmin() {
+                //$('#loadingModal').modal('show');
+                let json = await serverRequest('get-admin-data', {});
+                //console.log(json);
+                adminData = json.data;
+                setInterval(systemLogLoop, 3000);
+                initializeSessionLayout();
+                initializeDatabaseLayout();
+                initializeSecurity();
+                console.log("done");
+                //$('#loadingModal').modal('hide');
+            }
+
+            async function saveConfiguration() {
+              let json = await serverRequest('save-config', {config: adminData.config});
+              if (json.ok) {
+                $('configurationSavedModal').modal('show');
+              } else {
+                $('configurationFailedModal').modal('show');
+              }
+            }
+
+            $(document).ready(function() {
+                //$('#loadingModal').modal('show'); // Contoh pemanggilan modal
+                initializeAdmin();
+            });
+
+    var win = navigator.platform.indexOf('Win') > -1;
+    if (win && document.querySelector('#sidenav-scrollbar')) {
+      var options = {
+        damping: '0.5'
+      }
+      Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
+    }
+  </script>
+  <!-- Github buttons -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
+  <script src="./assets/js/argon-dashboard.min.js?v=2.1.0"></script>
+</body>
+
+</html>
