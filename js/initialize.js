@@ -31,7 +31,7 @@ function handlePageID() {
 }
 
 
-const brand = '<img src="./assets/img/logo.png" width="32px" height="32px" class="navbar-brand-img h-100" alt="main_logo"><span class="ms-1 font-weight-bold">BASIS-64</span>';
+const brand = '<img src="./assets/img/logo.png" width="32px" height="32px" class="navbar-brand-img h-100" alt="main_logo"><span class="ms-1 font-weight-bold">BASIS-64</span><br/>The hub of future tools';
 
 function getSideNavList() {
     let sidenav = document.getElementById('sidenav-main');
