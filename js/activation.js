@@ -11,7 +11,7 @@ async function callback() {
                     return;
                 }
 
-                if (!page.premium_level) {
+                if (!page.premium_level || page.premium_level == 0) {
                     return;
                 }
 
