@@ -15,7 +15,7 @@ async function callback() {
                     return;
                 }
 
-                console.log("callback " + account);
+                console.log("callback " + page.premium_level);
 
                 if (account == null) {
                     $("#accountNotActivatedDialogModal").modal("show");
