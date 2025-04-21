@@ -546,7 +546,7 @@ read02.addEventListener("click", function () {
 });*/
 
 async function translateText() {
-    if (!activationStatusInitialized) {
+    if (!activationStatusInitialized && getMenuById(page_id).premium_level) {
         $("#accountNotActivatedDialogModal").modal("show");
         document.getElementById('accountNotActivatedDialogModalMessage').innerHTML = 'Tidak dapat menerjemahkan.<br/>Silakan login menggunakan akun Google dan aktivasi akun kamu untuk mengakses fitur premuim pada website ini, hubungi admin untuk mengaktivasi akun kamu.<br/><br/>kamu dapat melihat daftar harganya <a href="activation.html">di sini</a>';
         $('#accountNotActivatedDialogModal').on('hidden.bs.modal', function () {
