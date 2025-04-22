@@ -14,6 +14,7 @@
 -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -119,13 +120,58 @@ Tekan CTRL + SHIFT + R secara bersamaan untuk memuat ulang website ini.</p>
         
       </div>
 
-      <div class="border bg-light d-flex justify-content-between align-middle p-4 mb-6">
+      <div class="border bg-light d-flex justify-content-between align-middle p-4 mb-1">
         <p>Login sebagai administrator</p>
         <a class="btn btn-dark" href="admin-login.html">Login</a>
       </div>
       
       
     </div>
+    <!-- Changelog section-->
+            <div>
+                <div class="container my-2">
+                    <div class="card mb-8">
+                        <div class="card-header p-4 d-flex justify-content-between align-items-center">
+                            <div class="d-flex flex-row">
+                                <i class="bi bi-code-slash"></i>
+                                &nbsp;Change Log
+                            </div>
+                            <div class="d-flex flex-row-reverse">
+                                <button class="btn btn-outline-dark" onclick="navigator.clipboard.writeText(document.getElementById('changelogText').value); $('#copiedModal').modal('show')">
+                                    <i class="bi bi-clipboard"></i>
+                                    &nbsp;Copy
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <table id="datatablesSimple">
+                                <div class="form-floating">
+                                    <div class="">
+                                        <textarea id="changelogText" class="form-control" rows="40" readonly></textarea>
+                                    </div>
+                                </div>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!-- Copied modal -->
+        <div id="copiedModal" class="modal fade" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Message</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p>Teks disalin.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Tutup</button>
+              </div>
+            </div>
+          </div>
+        </div>
     <footer class="footer pt-3 bg-dark  " id="footer">
         
       </footer>
@@ -154,6 +200,10 @@ Tekan CTRL + SHIFT + R secara bersamaan untuk memuat ulang website ini.</p>
   <script>
                     let page_id = "index";
                     let searchResult = document.getElementById("searchResult");
+
+                    fetch("https://raw.githubusercontent.com/basis64computer/basis64-tools_configuration/main/changelog.txt").then(x => x.text()).then(text => {
+                        document.getElementById('changelogText').value = text;
+                    });
 
 
     async function initialize() {
