@@ -1,0 +1,196 @@
+{
+    "author": "BASIS-64",
+    "sidenav": {
+        "index": "Halaman Awal",
+        "profile": "Lihat profil",
+        "developer": "Opsi pengembang",
+        "price": "Harga produk",
+        "payment": "Aktivasi & pembayaran",
+        "feedback": "Feedback",
+        "faq": "FAQ",
+        "about": "Tentang kami",
+        "googleUser": "Pengguna Google",
+        "loginTitle": "Belum login?",
+        "loginDescription": "Login untuk mendapatkan trial gratis 1 hari.",
+        "login": "Login",
+        "register": "Buat akun",
+        "logout": "Log out"
+    },
+    "navbar": {
+        "search": "Cari di BASIS-64",
+        "profile": "Profil pengguna",
+        "login": "Login",
+        "logout": "Log out"
+    },
+    "footer": {
+        "copyright": "BASIS-64™. Hak cipta dilindungi.",
+        "about": "Tentang kami",
+        "privacy": "Kebijakan privasi",
+        "terms": "Persyaratan & ketentuan",
+        "contact": "Kontak"
+    },
+    "pages": {
+        "index": {
+            "title": "BASIS-64 - Penerjemah Dayak Kenyah",
+            "metaName": "BASIS-64 - Penerjemah Dayak Kenyah",
+            "alternativeMetaName": "BASIS-64",
+            "metaDescription": "BASIS-64 menyediakan fasilitas penerjemah Dayak Kenyah pertama di dunia dan dilengkapi dengan teknologi NLP dan kecerdasan buatan.",
+            "metaKeywords": "basis-64, basis64, basis-64 computer, basis64 computer, computer, komputer, basis64 tools, tools, peralatan basis64, peralatan, penerjemah dayak kenyah, dayak kenyah, kamus kenyah, bahasa kenyah, penerjemah dayak, penerjemah bahasa dayak, kamus dayak kenyah",
+            "contentTitle": "Terjemahkan Bahasa Dayak Kenyah dengan Mudah!",
+            "contentDescription": "BASIS-64 menyediakan berbagai fasilitas lengkap, termasuk penerjemah bahasa Dayak Kenyah berbasis NLP (Natural Language Processing). Beberapa fitur premium memerlukan pembayaran untuk dapat diakses. Login dengan akun Google untuk mendapatkan trial gratis selama 1 hari. Tekan CTRL + SHIFT + R secara bersamaan untuk memuat ulang website ini.",
+            "visitorTitle": "Jumlah pengunjung hari ini",
+            "dictionaryTitle": "Jumlah kosakata Dayak Kenyah",
+            "accuracyTitle": "Akurasi penerjemah"
+        },
+        "profile": {
+            "title": "Profil Pengguna",
+            "googleUser": "Pengguna Google",
+            "accountInformation": "Informasi akun",
+            "name": "Name",
+            "email": "Email",
+            "status": "Status aktivasi",
+            "expired": "Sisa aktivasi",
+            "date": "Batas aktivasi",
+            "deleteAccount": "Hapus akun",
+            "activated": "Akun diaktivasi",
+            "activationExpired": "Aktivasi kadaluarsa",
+            "notActivated": "Belum diaktivasi",
+            "activatedDescription": "Akun kamu telah diaktivasi oleh administrator website ini.",
+            "expiredDescription": "Akun kamu kadaluarsa, silakan aktivasi kembali.",
+            "notActivatedDescription": "Akun kamu tidak diaktivasi, kamu tidak dapat mengakses fitur premium."
+        },
+        "developer": {
+            "title": "Opsi Pengembang",
+            "description": "Kami belum membuat fitur ini, fitur opsi pengembang yang memungkinkan penggunaan API akan dirilis pada tanggal 30 Juni 2025."
+        },
+        "price": {
+            "title": "Mulai Berlangganan",
+            "contentTitle": "Mulai Berlangganan!",
+            "contentDescription": "Kamu dapat mengaktivasi akun kamu dengan cara berlangganan sesuai dengan paket yang kamu pilih.",
+            "hematTitle": "Paket Hemat",
+            "hematDescription": "Aktivasi dengan harga paling terjangkau. Cocok untuk kebutuhan singkat dan uji coba fitur premium BASIS-64.",
+            "hematPrice": "Rp5.000",
+            "hematDuration": "minggu",
+            "hematFeature1": "Akses tak terbatas ke penerjemah Dayak Kenyah berbasis AI NLP selama satu minggu",
+            "remixTitle": "Paket Remix",
+            "remixDescription": "Pilihan menengah untuk kamu yang butuh akses lebih lama tanpa perlu sering perpanjangan. Seimbang antara durasi dan harga.",
+            "remixPrice": "Rp15.000",
+            "remixDuration": "bulan",
+            "remixFeature1": "Akses tak terbatas ke penerjemah Dayak Kenyah berbasis AI NLP selama satu bulan",
+            "phoenixTitle": "Paket Phoenix",
+            "phoenixDescription": "Paket dengan durasi terpanjang. Ideal untuk pengguna setia yang ingin aktivasi jangka panjang dalam waktu satu tahun.",
+            "phoenixPrice": "Rp120.000",
+            "phoenixDuration": "tahun",
+            "phoenixFeature1": "Akses tak terbatas ke penerjemah Dayak Kenyah berbasis AI NLP selama satu tahun"
+        },
+        "payment": {
+            "title": "Aktivasi & Pembayaran",
+            "contentTitle": "Aktivasi & Pembayaran",
+            "contentDescription": "Lakukan pembayaran secara online melalui QRIS. Screenshot dan kirim bukti pembayaran kamu melalui Whatsapp admin website ini.",
+            "step1Title": "Step 1",
+            "step1Description": "Scan QRIS di bawah ini dengan menggunakan aplikasi DANA atau Gopay untuk melakukan pembayaran.",
+            "step2Title": "Step 2",
+            "step2Description": "Hubungi admin melalui WhatsApp lalu kirimkan bukti pengiriman dan beritahu emailmu ke admin agar dapat diaktivasi.",
+            "step2Button": "Hubungi admin melalui WhatsApp",
+            "step3Title": "Step 2",
+            "step3Description": "Scan QRIS di bawah ini dengan menggunakan aplikasi DANA atau Gopay untuk melakukan pembayaran.",
+            "step3Button": "Klik di sini untuk melihat profil akun"
+        },
+        "feedback": {
+          "title": "Feedback",
+          "contentTitle": "Berikan Kami Feedback",
+          "contentDescription": "Kami sangat menghargai masukan dan saran kamu dan beritahu kami jika terdapat bug pada website ini.",
+          "name": "Nama",
+          "message": "Pesan",
+          "messagePlaceholder": "Ketik pesan kamu di sini...",
+          "send": "Kirim"
+        },
+        "faq": {
+          "title": "FAQ",
+          "q1": "Apakah akun saya aman di BASIS-64?",
+          "a1": "Ya, kami menjamin keamanan akun Anda selama pertukaran data. Semua informasi yang dikirimkan ke server kami dienkripsi end-to-end menggunakan AES untuk enkripsi data dan RSA untuk proses pertukaran kunci.",
+          "q2": "Apakah admin atau pemilik website ini tahu kata sandi akun saya?",
+          "a2": "Tidak, kami sebagai pemilik website tidak dapat membaca kata sandi akun Anda. Semua kata sandi disimpan dalam bentuk terenkripsi menggunakan algoritma yang aman dan tidak dapat dilihat oleh siapa pun, termasuk admin.",
+          "q3": "Bagaimana jika saya lupa kata sandi akun saya?",
+          "a3": "Jika Anda lupa kata sandi akun Anda, Anda dapat mengubah password Anda dengan cara mengklik 'Lupa Password' pada halaman login.",
+          "q4": "Seberapa akurat translator ini?",
+          "a4": "Saat ini, kami menggunakan teknologi <strong>NLP (Natural Language Processing)</strong> untuk menerjemahkan bahasa Dayak Kenyah dengan lebih akurat, dengan akurasi hingga 90%. Teknologi ini membantu sistem memahami struktur dan makna kalimat, sehingga terjemahan tidak hanya berdasarkan kata per kata, tetapi juga sesuai dengan konteks. Dengan begitu, pengguna bisa mendapatkan hasil terjemahan yang lebih alami, mudah dipahami, dan mendekati makna aslinya.",
+          "q5": "Bagaimana cara melakukan pembayaran?",
+          "a5": "Anda dapat melakukan pembayaran melalui <a href=\"payment.html\">QRIS</a> atau melalui cash dengan cara menemui admin secara langsung, Anda bisa mendapatkan aktivasi secara otomatis setelah mengirimkan bukti pengiriman jika Anda membayar melalui QRIS. Anda bisa menghubungi <a href=\"https://wa.me/+622211509216\" target=\"_blank\">admin melalui whatsapp</a> jika terdapat masalah dalam aktivasi.",
+          "q6": "Apakah penerjemah Dayak Kenyah BASIS-64 gratis?",
+          "a6": "Tidak, penerjemah Dayak Kenyah BASIS-64 <strong>tidak gratis.</strong> Pengguna perlu berlangganan untuk mengakses fitur ini. Lihat pilihan paket yang tersedia <a href=\"price.html\" class=\"text-blue-600 underline\">di sini.</a> Meski demikian, BASIS-64 sesekali membuka akses gratis dalam periode promosi tertentu — namun hal ini sangat jarang terjadi."
+
+        },
+        "about": {
+          "title": "Tentang Kami",
+          "contentTitle": "Siapa kami?",
+          "contentDescription": "Kami adalah perusahaan perangkat lunak dan penyedia layanan penerjemah bahasa Dayak Kenyah pertama di dunia yang menggunakan NLP (Natural Language Proccessing) yang memungkinkan penerjemahan yang akurat karena penerjemah kami dapat menerjemahkan kalimat dan bahkan mengubah susunan kata, seperti 'saya seorang guru' menjadi 'ca guru keq' atau 'sudahkah kamu makan' menjadi 'lepe ne ikoq uman'. Penerjemah kami berbeda dengan penerjemah generasi sebelumnya yang hanya mengganti kata perkata yang relatif sederhana.",
+          "contactTitle": "Hubungi kami"
+        },
+        "login": {
+            "loginTitle": "Login ke BASIS-64",
+            "login": "Log in",
+            "email": "Email",
+            "password": "Password",
+            "forgotPassword": "Lupa kata sandi? Reset kata sandi",
+            "createAccount": "Belum memiliki akun? Buat akun"
+        },
+        "register": {
+          "title": "Buat Akun",
+          "contentTitle": "Daftar dengan Google!",
+          "contentDescription": "Kami memastikan proses pendaftaran akun mudah dan cepat. Kami membutuhkan akun Google kamu untuk menjaga keamanan dan mencegah aktivitas spam, demi pengalaman yang lebih nyaman.",
+          "loginWithGoogle": "Daftar dengan Google",
+          "agree": "Saya setuju dengan <a href=\"terms.html\" class=\"text-blue-600 font-semibold ml-1\">Syarat dan Ketentuan situs ini</a>",
+          "register": "Daftar",
+          "login": "Sudah memiliki akun? <a href=\"login.html\" class=\"text-blue-600 font-semibold\">Login</a>",
+          "about": "Tentang kami",
+          "contact": "Hubungi kami",
+          "terms": "Persyaratan layanan",
+          "passwordInvalid": "Password harus diisi.",
+          "confirmPasswordInvalid": "Password dan konfirmasi harus sama.",
+          "emailRegistered": "Email ini sudah terdaftar. Silakan login."
+        },
+        "forgot-password": {
+          "title": "Lupa Kata Sandi",
+          "contentTitle": "Pemulihan Akun",
+          "contentDescription": "Jika Anda lupa kata sandi, kami akan mengirimkan OTP ke akun Gmail Anda. Pastikan Anda memeriksa seluruh kotak masuk Anda, termasuk folder spam atau sampah.",
+          "resetPassword": "Reset Kata Sandi",
+          "emailError": "Alamat email tidak sesuai.",
+          "getOTP": "Dapatkan OTP",
+          "notVerified": "OTP tidak dapat diverifikasi.",
+          "verifyOTP": "Verifikasi OTP",
+          "changePassword": "Ganti password",
+          "login": "Sudah memiliki akun? <a href=\"login.html\" class=\"text-blue-600 font-semibold\">Login</a>",
+          "about": "Tentang kami",
+          "terms": "Persyaratan layanan",
+          "SEND_OTP_FAILED": "Tidak dapat meminta OTP.",
+          "OTP_REQUESTED": "Anda telah meminta OTP sebelumnya, periksa kotak masuk pada akun Gmail Anda.",
+          "TRY_ERROR": "Brute force terdeteksi, coba lagi nanti.",
+          "OTP_NOT_SAME": "OTP tidak sesuai, coba lagi.",
+          "UNKNOWN_ERROR": "OTP kadaluarsa, minta kembali OTP untuk memulihkan akun.",
+          "remainingTime": "Tunggu <SECONDS_PLACEHOLDER> detik untuk meminta kembali OTP",
+          "requestNewOTP": "Minta kembali OTP",
+          "required": "Password harus diisi.",
+          "confirmPassword": "Password dan konfirmasi password harus sama."
+        }
+    },
+    "messages": {
+        "info": "Info",
+        "close": "Tutup",
+        "loading": "Memuat halaman...",
+        "loginLoading": "Mohon tunggu, sedang login...",
+        "LOGIN_FAILED": "Tidak dapat login.",
+        "WRONG_PASSWORD": "Username atau password salah.",
+        "ACCOUNT_USED": "Akun ini telah digunakan oleh perangkat lain.",
+        "INVALID_SESSION_ID": "Sesi telah berakhir, refresh kembali halaman ini.",
+        "ACCOUNT_NOT_FOUND": "Akun ini belum terdaftar di BASIS-64.",
+        "logoutLoading": "Mohon tunggu, sedang logout..."
+    },
+    "etc": {
+        "login": "Login",
+        "register": "Daftar akun",
+        "logout": "Log out",
+        "days": "hari",
+        "dayNames": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu", "Minggu"]
+    }
+}

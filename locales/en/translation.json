@@ -1,0 +1,203 @@
+{
+  "author": "BASIS-64",
+  "sidenav": {
+    "index": "Home Page",
+    "profile": "View profile",
+    "developer": "Developer options",
+    "price": "Product prices",
+    "payment": "Activation & payment",
+    "feedback": "Feedback",
+    "faq": "FAQ",
+    "about": "About us",
+    "googleUser": "Google User",
+    "loginTitle": "Not logged in?",
+    "loginDescription": "Log in to get a 1-day free trial.",
+    "login": "Log in",
+    "register": "Create account",
+    "logout": "Log out"
+  },
+  "navbar": {
+    "search": "Search BASIS-64",
+    "profile": "User profile",
+    "login": "Log in",
+    "logout": "Log out"
+  },
+  "footer": {
+    "copyright": "BASIS-64™. All rights reserved.",
+    "about": "About us",
+    "privacy": "Privacy policy",
+    "terms": "Terms & conditions",
+    "contact": "Contact"
+  },
+  "pages": {
+    "index": {
+      "title": "BASIS-64 - Dayak Kenyah Translator",
+      "metaName": "BASIS-64 - Dayak Kenyah Translator",
+      "alternativeMetaName": "BASIS-64",
+      "metaDescription": "BASIS-64 provides the first Dayak Kenyah translator in the world and is equipped with NLP technology and artificial intelligence.",
+      "metaKeywords": "basis-64, basis64, basis-64 computer, basis64 computer, computer, komputer, basis64 tools, tools, basis64 equipment, equipment, Dayak Kenyah translator, Dayak Kenyah, Kenyah dictionary, Kenyah language, Dayak translator, Dayak language translator, Dayak Kenyah dictionary",
+      "contentTitle": "Translate Dayak Kenyah Easily!",
+      "contentDescription": "BASIS-64 provides a variety of complete facilities, including an NLP (Natural Language Processing) based Dayak Kenyah translator. Some premium features require payment to access. Log in with your Google account to get a 1-day free trial. Press CTRL + SHIFT + R simultaneously to reload this website.",
+      "visitorTitle": "Number of visitors today",
+      "dictionaryTitle": "Number of Dayak Kenyah vocabulary",
+      "accuracyTitle": "Translator accuracy"
+    },
+    "profile": {
+      "title": "User Profile",
+      "googleUser": "Google User",
+      "accountInformation": "Account information",
+      "name": "Name",
+      "email": "Email",
+      "status": "Activation status",
+      "expired": "Activation remaining",
+      "date": "Activation limit",
+      "deleteAccount": "Delete account",
+      "activated": "Account activated",
+      "activationExpired": "Activation expired",
+      "notActivated": "Not activated",
+      "activatedDescription": "Your account has been activated by the website administrator.",
+      "expiredDescription": "Your account has expired, please reactivate.",
+      "notActivatedDescription": "Your account is not activated, you cannot access premium features."
+    },
+    "developer": {
+      "title": "Developer Options",
+      "description": "We haven't made this feature yet, the developer options feature that allows API usage will be released on June 30, 2025."
+    },
+    "price": {
+      "title": "Start Subscription",
+      "contentTitle": "Start Subscribing!",
+      "contentDescription": "You can activate your account by subscribing according to the package you choose.",
+      "hematTitle": "Hemat Package",
+      "hematDescription": "Activation at the most affordable price. Suitable for short-term needs and trying out BASIS-64 premium features.",
+      "hematPrice": "Rp5,000",
+      "hematDuration": "week",
+      "hematFeature1": "Unlimited access to the AI NLP-based Dayak Kenyah translator for one week",
+      "remixTitle": "Remix Package",
+      "remixDescription": "The medium option for those who need longer access without frequent renewals. Balanced between duration and price.",
+      "remixPrice": "Rp15,000",
+      "remixDuration": "month",
+      "remixFeature1": "Unlimited access to the AI NLP-based Dayak Kenyah translator for one month",
+      "phoenixTitle": "Phoenix Package",
+      "phoenixDescription": "The package with the longest duration. Ideal for loyal users who want long-term activation within one year.",
+      "phoenixPrice": "Rp120,000",
+      "phoenixDuration": "year",
+      "phoenixFeature1": "Unlimited access to the AI NLP-based Dayak Kenyah translator for one year"
+    },
+    "payment": {
+      "title": "Activation & Payment",
+      "contentTitle": "Activation & Payment",
+      "contentDescription": "Make payments online via QRIS. Screenshot and send your proof of payment via the website admin's WhatsApp.",
+      "step1Title": "Step 1",
+      "step1Description": "Scan the QRIS below using the DANA or Gopay application to make a payment.",
+      "step2Title": "Step 2",
+      "step2Description": "Contact the admin via WhatsApp and send proof of payment and tell the admin your email so they can activate it.",
+      "step2Button": "Contact admin via WhatsApp",
+      "step3Title": "Step 2",
+      "step3Description": "Scan the QRIS below using the DANA or Gopay application to make a payment.",
+      "step3Button": "Click here to view account profile"
+    },
+    "feedback": {
+      "title": "Feedback",
+      "contentTitle": "Give Us Feedback",
+      "contentDescription": "We really appreciate your input and suggestions and let us know if there are bugs on this website.",
+      "name": "Name",
+      "message": "Message",
+      "messagePlaceholder": "Type your message here...",
+      "send": "Send"
+    },
+    "faq": {
+      "title": "FAQ",
+      "q1": "Is my account safe on BASIS-64?",
+      "a1": "Yes, we guarantee the security of your account during data exchange. All information sent to our servers is encrypted end-to-end using AES for data encryption and RSA for the key exchange process.",
+      "q2": "Does the admin or owner of this website know my account password?",
+      "a2": "No, we as the website owner cannot read your account password. All passwords are stored in encrypted form using a secure algorithm and cannot be viewed by anyone, including admins.",
+      "q3": "What if I forget my account password?",
+      "a3": "If you forget your account password, you can change your password by clicking 'Forgot Password' on the login page.",
+      "q4": "How accurate is this translator?",
+      "a4": "Currently, we use NLP (Natural Language Processing) technology to translate Dayak Kenyah more accurately, with up to 90% accuracy. This technology helps the system understand the structure and meaning of sentences, so translations are not only word-for-word, but also according to context. That way, users can get translation results that are more natural, easy to understand, and close to the original meaning.",
+      "q5": "How do I make a payment?",
+      "a5": "You can make payments via <a href=\"payment.html\">QRIS</a> or in cash by meeting the admin directly. You can get automatic activation after sending proof of payment if you pay via QRIS. You can contact <a href=\"https://wa.me/+622211509216\" target=\"_blank\">the admin via WhatsApp</a> if there are problems with activation.",
+      "q6": "Is the BASIS-64 Dayak Kenyah translator free?",
+      "a6": "No, the BASIS-64 Dayak Kenyah translator is <strong>not free.</strong> Users need to subscribe to access this feature. See the available package options <a href=\"price.html\" class=\"text-blue-600 underline\">here.</a> However, BASIS-64 occasionally opens free access during certain promotional periods — but this is very rare."
+    },
+    "about": {
+      "title": "About Us",
+      "contentTitle": "Who are we?",
+      "contentDescription": "We are a software company and the world's first Dayak Kenyah language translator service provider that uses NLP (Natural Language Processing) which enables accurate translation because our translator can translate sentences and even change word order, such as 'I am a teacher' to 'ca guru keq' or 'have you eaten' to 'lepe ne ikoq uman'. Our translator is different from previous generation translators that only replace simple word-for-word.",
+      "contactTitle": "Contact us"
+    },
+    "login": {
+      "loginTitle": "Login to BASIS-64",
+      "login": "Log in",
+      "email": "Email",
+      "password": "Password",
+      "forgotPassword": "Forgot password? Reset password",
+      "createAccount": "Don't have an account? Create an account"
+    },
+    "register": {
+      "title": "Create Account",
+      "contentTitle": "Register with Google!",
+      "contentDescription": "We ensure the account registration process is easy and fast. We need your Google account to maintain security and prevent spam activity, for a more comfortable experience.",
+      "loginWithGoogle": "Register with Google",
+      "agree": "I agree to the <a href=\"terms.html\" class=\"text-blue-600 font-semibold ml-1\">Terms and Conditions of this site</a>",
+      "register": "Register",
+      "login": "Already have an account? <a href=\"login.html\" class=\"text-blue-600 font-semibold\">Login</a>",
+      "about": "About us",
+      "contact": "Contact us",
+      "terms": "Terms of service",
+      "passwordInvalid": "Password must be filled in.",
+      "confirmPasswordInvalid": "Password and confirmation must be the same.",
+      "emailRegistered": "This email is already registered. Please login."
+    },
+    "forgot-password": {
+      "title": "Forgot Password",
+      "contentTitle": "Account Recovery",
+      "contentDescription": "If you forget your password, we will send an OTP to your Gmail account. Make sure you check your entire inbox, including the spam or junk folder.",
+      "resetPassword": "Reset Password",
+      "emailError": "Incorrect email address.",
+      "getOTP": "Get OTP",
+      "notVerified": "OTP cannot be verified.",
+      "verifyOTP": "Verify OTP",
+      "changePassword": "Change password",
+      "login": "Already have an account? <a href=\"login.html\" class=\"text-blue-600 font-semibold\">Login</a>",
+      "about": "About us",
+      "terms": "Terms of service",
+      "SEND_OTP_FAILED": "Failed to request OTP.",
+      "OTP_REQUESTED": "You have previously requested an OTP, check the inbox on your Gmail account.",
+      "TRY_ERROR": "Brute force detected, please try again later.",
+      "OTP_NOT_SAME": "OTP does not match, please try again.",
+      "UNKNOWN_ERROR": "OTP expired, request a new OTP to recover your account.",
+      "remainingTime": "Wait <SECONDS_PLACEHOLDER> seconds to request a new OTP",
+      "requestNewOTP": "Request new OTP",
+      "required": "Password must be filled in.",
+      "confirmPassword": "Password and confirm password must be the same."
+    }
+  },
+  "messages": {
+    "info": "Info",
+    "close": "Close",
+    "loading": "Loading page...",
+    "loginLoading": "Please wait, logging in...",
+    "LOGIN_FAILED": "Failed to log in.",
+    "WRONG_PASSWORD": "Incorrect username or password.",
+    "ACCOUNT_USED": "This account is already in use on another device.",
+    "INVALID_SESSION_ID": "Session has expired, please refresh this page.",
+    "ACCOUNT_NOT_FOUND": "This account is not yet registered with BASIS-64.",
+    "logoutLoading": "Please wait, logging out..."
+  },
+  "etc": {
+    "login": "Log in",
+    "register": "Register account",
+    "logout": "Log out",
+    "days": "days",
+    "dayNames": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday"
+    ]
+  }
+}

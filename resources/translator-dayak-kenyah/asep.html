@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alat Penerjemah</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Gaya tambahan untuk ikon yang mungkin belum ada di Tailwind */
+        .swap-icon {
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 p-6">
+    <div class="max-w-2xl mx-auto bg-white rounded-xl shadow-md overflow-hidden">
+        <div class="p-6">
+            <h1 class="text-xl font-semibold text-gray-800 mb-2">Alat Penerjemah</h1>
+            <p class="text-gray-500 text-sm mb-4">Masukkan teks dan pilih arah terjemahan</p>
+
+            <div class="flex items-center justify-end mb-4 space-x-4">
+                <div class="flex items-center space-x-2">
+                    <label class="relative inline-flex items-center cursor-pointer">
+                        <input type="checkbox" value="" class="sr-only peer">
+                        <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-indigo-500 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-indigo-500"></div>
+                    </label>
+                    <span class="text-sm text-gray-700">Mode AI</span>
+                </div>
+                <span class="text-gray-400"><i class="fa-regular fa-lightbulb"></i></span>
+                <span class="text-gray-400"><i class="fa-solid fa-info-circle"></i></span>
+            </div>
+
+            <div class="flex space-x-2 mb-4">
+                <button class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-4 rounded-full">Terjemahkan</button>
+                <button class="text-gray-600 hover:text-gray-800 py-2 px-4 rounded-full">Kamus</button>
+            </div>
+
+            <div class="bg-gray-50 rounded-md p-4 mb-4">
+                <div class="flex items-center justify-between mb-2">
+                    <div class="flex items-center space-x-2">
+                        <button class="bg-indigo-100 text-indigo-700 font-semibold py-1 px-3 rounded-full text-sm">Kenyah</button>
+                        <button class="text-gray-500 hover:text-gray-700 text-sm"><i class="fa-solid fa-volume-up"></i> Dengarkan</button>
+                    </div>
+                    <div class="text-gray-500 text-sm">15/500</div>
+                    <button class="text-gray-500 hover:text-gray-700 text-sm">Hapus</button>
+                </div>
+                <textarea id="inputText" rows="3" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md p-2" placeholder=""></textarea>
+                <div class="flex justify-end text-gray-400 text-sm mt-1">KNY</div>
+            </div>
+
+            <div class="flex items-center justify-between mb-4">
+                <button class="bg-white border border-gray-300 hover:bg-gray-100 text-gray-700 font-semibold py-2 px-4 rounded-full flex items-center space-x-2">
+                    <span>Tukar Bahasa</span>
+                    <i class="fa-solid fa-arrow-down swap-icon"></i>
+                </button>
+                <button class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-6 rounded-full">Terjemahkan</button>
+                <button class="bg-white border border-gray-300 hover:bg-gray-100 text-gray-700 font-semibold py-2 px-4 rounded-full flex items-center space-x-2">
+                    <i class="fa-solid fa-rotate-left"></i>
+                    <span>Riwayat</span>
+                </button>
+            </div>
+
+            <div class="bg-gray-50 rounded-md p-4">
+                <div class="flex items-center justify-between mb-2">
+                    <div class="flex items-center space-x-2">
+                        <button class="bg-green-100 text-green-700 font-semibold py-1 px-3 rounded-full text-sm">Indonesia</button>
+                        <button class="text-gray-500 hover:text-gray-700 text-sm"><i class="fa-solid fa-volume-up"></i> Dengarkan</button>
+                    </div>
+                    <button class="text-gray-500 hover:text-gray-700 text-sm"><i class="fa-regular fa-copy"></i> Salin</button>
+                </div>
+                <textarea id="outputText" rows="3" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md p-2 bg-gray-100 text-gray-700" placeholder="" readonly>nama aku Jurang</textarea>
+                <div class="flex justify-end text-gray-400 text-sm mt-1">ID</div>
+            </div>
+
+            <div class="mt-4 text-gray-500 text-xs">
+                <i class="fa-solid fa-info-circle"></i> Kata-kata dengan alternatif ditandai dengan <span class="underline text-indigo-500">warna</span>. Klik untuk memilih terjemahan yang berbeda.
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ... (JavaScript Anda di sini) ...
+    </script>
+</body>
+</html>

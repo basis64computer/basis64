@@ -1,170 +1,90 @@
-<!--
-=========================================================
-* Argon Dashboard 3 - v2.1.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/argon-dashboard
-* Copyright 2024 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://www.creative-tim.com/license)
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
--->
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="icon" type="image/x-icon" href="./assets/img/favicon.ico">
-  <title>
-    Login
-  </title>
-  <!--     Fonts and icons     -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
-  <!-- Nucleo Icons -->
-  <link href="https://demos.creative-tim.com/argon-dashboard-pro/assets/css/nucleo-icons.css" rel="stylesheet" />
-  <link href="https://demos.creative-tim.com/argon-dashboard-pro/assets/css/nucleo-svg.css" rel="stylesheet" />
-  <!-- Font Awesome Icons -->
-  <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
-  <!-- CSS Files -->
-  <link id="pagestyle" href="./assets/css/argon-dashboard.css?v=2.1.0" rel="stylesheet" />
-</head>
-
-<body class="">
-  <main class="main-content  mt-0">
-    <section>
-      <div class="page-header min-vh-100">
-        <div class="container">
-          <div class="row">
-            <div class="col-xl-4 col-lg-5 col-md-7 d-flex flex-column mx-lg-0 mx-auto">
-              <div class="card card-plain">
-                <div class="card-header pb-0 text-start">
-                  <h4 class="font-weight-bolder">Login</h4>
-                  <p class="mb-0">Login dengan email dan kata sandi</p>
-                </div>
-                <div class="card-body">
-                  <form role="form">
-                    <div class="mb-3">
-                      <input type="email" class="form-control form-control-lg" placeholder="Email" aria-label="Email" id="inputEmail">
-                    </div>
-                    <div class="mb-3">
-                      <input type="password" class="form-control form-control-lg" placeholder="Password" aria-label="Password" id="inputPassword">
-                    </div>
-                    <div class="justify-content-end text-end">
-                      <a class="text-primary" href="forgot-password.html">Lupa password? Klik di sini</a>
-                    </div>
-                    <div class="text-center">
-                      <button type="button" class="btn btn-lg btn-primary btn-lg w-100 mt-4 mb-0" onclick="login();">Login</button>
-                    </div>
-                  </form>
-                </div>
-                <div class="card-footer text-center pt-0 px-lg-2 px-1">
-                  <p class="mb-4 text-sm mx-auto">
-                    Belum memiliki akun?
-                    <a href="register.html" class="text-primary text-gradient font-weight-bold">Buat akun</a>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-6 d-lg-flex d-none h-100 my-auto pe-0 position-absolute top-0 end-0 text-center justify-content-center flex-column">
-              <div class="position-relative bg-gradient-primary h-100 m-3 px-7 border-radius-lg d-flex flex-column justify-content-center overflow-hidden" style="background-image: url('https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard-pro/assets/img/signin-ill.jpg');
-          background-size: cover;">
-                <span class="mask bg-gradient-primary opacity-6"></span>
-                <h4 class="mt-5 text-white font-weight-bolder position-relative">"Attention is the new currency"</h4>
-                <p class="text-white position-relative">The more effortless the writing looks, the more effort the writer actually put into the process.</p>
-              </div>
+<html :class="{ 'theme-dark': dark }" x-data="data()" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <title>Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./dist/output.css" />
+  </head>
+  <body>
+    <div class="flex items-center min-h-screen p-6 bg-gray-50 dark:bg-gray-900">
+      <div class="flex-1 h-full max-w-4xl mx-auto overflow-hidden bg-white rounded-lg shadow-xl dark:bg-gray-800">
+        <div class="flex flex-col overflow-y-auto md:flex-row">
+          <div class="h-32 md:h-auto md:w-1/2">
+            <img aria-hidden="true" class="object-cover w-full h-full dark:hidden" src="./assets/img/login-office.jpeg" alt="Office" />
+            <img aria-hidden="true" class="hidden object-cover w-full h-full dark:block" src="./assets/img/login-office-dark.jpeg" alt="Office" />
+          </div>
+          <div class="flex items-center justify-center p-6 sm:p-12 md:w-1/2">
+            <div class="w-full">
+              <h1 class="mb-4 text-xl font-semibold text-gray-700 dark:text-gray-200" data-i18n="pages.login.loginTitle"> Login ke BASIS-64 </h1>
+              <label class="block text-sm">
+                <span class="text-gray-700 dark:text-gray-400" data-i18n="pages.login.email">Email</span>
+                <input type="email" id="inputEmail" aria-describedby="helper-text-explanation" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="example@gmail.com">
+              </label>
+              <label class="block mt-4 text-sm">
+                <span class="text-gray-700 dark:text-gray-400" data-i18n="pages.login.password">Password</span>
+                <input type="password" id="inputPassword" aria-describedby="helper-text-explanation" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="********">
+              </label>
+              <!-- You should use a button here, as the anchor is only used for the example  -->
+              <button class="block w-full px-4 py-2 mt-4 text-sm font-medium leading-5 text-center text-white transition-colors duration-150 bg-primary-600 border border-transparent rounded-lg active:bg-primary-600 hover:bg-primary-700 focus:outline-none focus:shadow-outline-primary" href="../index.html" onclick="login();" data-i18n="pages.login.login"> Log in </button>
+              <hr class="my-8" />
+              <p class="mt-4">
+                <a class="text-sm font-medium text-primary-600 dark:text-primary-400 hover:underline" href="./forgot-password.html" data-i18n="pages.login.forgotPassword"> Lupa kata sandi? Reset kata sandi </a>
+              </p>
+              <p class="mt-1">
+                <a class="text-sm font-medium text-primary-600 dark:text-primary-400 hover:underline" href="./register.html" data-i18n="pages.login.createAccount"> Belum memiliki akun? Buat akun </a>
+              </p>
             </div>
           </div>
         </div>
       </div>
-    </section>
-    <div id="loginModal" class="modal fade" tabindex="-1">
-          <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title">Info</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                <p id="message"></p>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Tutup</button>
-              </div>
-            </div>
-          </div>
-        </div>
-  </main>
-  <!--   Core JS Files   -->
-  <script src="./assets/js/core/popper.min.js"></script>
-  <script src="./assets/js/core/bootstrap.min.js"></script>
-  <script src="./assets/js/plugins/perfect-scrollbar.min.js"></script>
-  <script src="./assets/js/plugins/smooth-scrollbar.min.js"></script>
-  <script src="js/scripts.js"></script>
-        <script src="js/jquery.min.js" type="text/javascript"></script>
-        <script src="js/icons.js"></script>
-        <script src="js/admin.js"></script>
-        <script src="js/cookie.js"></script>
-        <script src="js/encrypt.js"></script>
-        <script src="js/initialize.js"></script>
-  <script>
-    let page_id = "sign_in";
-    let inputEmail = document.getElementById('inputEmail');
-            let inputPassword = document.getElementById('inputPassword');
+    </div>
+    <!-- Message modal -->
+    <div id="messageModal" tabindex="-1" aria-hidden="true" class="hidden overlay modal overflow-y-auto overflow-x-hidden fixed z-50 justify-center items-center w-full inset-0 h-[calc(100%)] max-h-full bg-black bg-opacity-50"></div>
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <script src="js/simple-datatables.min.js" crossorigin="anonymous"></script>
+    <script src="js/i18next.min.js"></script>
+    <script src="js/i18nextHttpBackend.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+    <script src="js/icons.js"></script>
+    <script src="js/cookie.js"></script>
+    <script src="js/visitor.js"></script>
+    <script src="js/encrypt.js"></script>
+    <script src="js/initialize.js"></script>
+    <script src="js/i18n.js"></script>
+    <script type="text/javascript">
+      let page_id = "login";
+      let inputEmail = document.getElementById('inputEmail');
+      let inputPassword = document.getElementById('inputPassword');
 
-            function callback() {
-                if (account) {
-                    window.location.replace("index.html");
-                }
-            }
-
-            function message(msg) {
-                document.getElementById('message').innerHTML = msg;
-                $("#loginModal").modal("show");
-            }
-
-            async function login() {
-                if (!inputEmail.value || !inputPassword.value) {
-                    message("Password harus diisi.");
-                    return;
-                }
-
-                let resultjson = await serverRequest("login", {email: inputEmail.value, password: inputPassword.value, user_agent: navigator.userAgent});
-                if (!resultjson.ok) {
-                    if (resultjson.error == "LOGIN_FAILED") {
-                        message("Tidak dapat login.");
-                    } else if (resultjson.error == "WRONG_PASSWORD") {
-                        message("Username atau password salah.");
-                    } else if (resultjson.error == "ACCOUNT_USED") {
-                        message("Akun ini telah digunakan oleh perangkat lain.");
-                    } else if (resultjson.error == "INVALID_SESSION_ID") {
-                        message("Sesi telah berakhir, refresh lagi halaman ini.");
-                    } else if (resultjson.error == "ACCOUNT_NOT_FOUND") {
-                        message("Akun kamu belum terdaftar di BASIS-64 Tools.");
-                    } else {
-                        message("Tidak dapat login.<br/><br/>ERR_CODE: " + resultjson.error);
-                    }
-                    return;
-                }
-                //console.log(resultjson);
-                window.location.replace("index.html");
-            }
-
-    var win = navigator.platform.indexOf('Win') > -1;
-    if (win && document.querySelector('#sidenav-scrollbar')) {
-      var options = {
-        damping: '0.5'
+      function callback() {
+        if (account) {
+          window.location.replace("index.html");
+        }
       }
-      Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
-    }
-  </script>
-  <!-- Github buttons -->
-  <script async defer src="https://buttons.github.io/buttons.js"></script>
-  <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
-  <script src="./assets/js/argon-dashboard.min.js?v=2.1.0"></script>
-</body>
-
+      async function login() {
+        if (!inputEmail.value || !inputPassword.value) {
+          messageModal("Password harus diisi.");
+          return;
+        }
+        loadingModal(i18next.t("messages.loginLoading"));
+        let resultjson = await serverRequest("login", {
+          email: inputEmail.value,
+          password: inputPassword.value,
+          user_agent: navigator.userAgent
+        });
+        console.log(navigator.userAgent);
+        if (!resultjson.ok) {
+          messageModal(i18next.t(`messages.${resultjson.error}`));
+          return;
+        }
+        //console.log(resultjson);
+        window.location.replace("index.html");
+      }
+    </script>
+  </body>
 </html>

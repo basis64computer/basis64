@@ -1,0 +1,203 @@
+{
+  "author": "BASIS-64",
+  "sidenav": {
+    "index": "ホームページ",
+    "profile": "プロフィールを表示",
+    "developer": "開発者オプション",
+    "price": "製品価格",
+    "payment": "アクティベーションと支払い",
+    "feedback": "フィードバック",
+    "faq": "よくある質問",
+    "about": "私たちについて",
+    "googleUser": "Google ユーザー",
+    "loginTitle": "ログインしていませんか？",
+    "loginDescription": "1日間の無料トライアルを入手するには、ログインしてください。",
+    "login": "ログイン",
+    "register": "アカウントを作成",
+    "logout": "ログアウト"
+  },
+  "navbar": {
+    "search": "BASIS-64 を検索",
+    "profile": "ユーザープロフィール",
+    "login": "ログイン",
+    "logout": "ログアウト"
+  },
+  "footer": {
+    "copyright": "BASIS-64™。無断複写・転載を禁じます。",
+    "about": "私たちについて",
+    "privacy": "プライバシーポリシー",
+    "terms": "利用規約",
+    "contact": "お問い合わせ"
+  },
+  "pages": {
+    "index": {
+      "title": "BASIS-64 - ダヤク・クニャー翻訳者",
+      "metaName": "BASIS-64 - ダヤク・クニャー翻訳者",
+      "alternativeMetaName": "BASIS-64",
+      "metaDescription": "BASIS-64 は、世界初のダヤク・クニャー翻訳者を提供し、NLP テクノロジーと人工知能を備えています。",
+      "metaKeywords": "basis-64, basis64, basis-64 コンピューター, basis64 コンピューター, コンピューター, komputer, basis64 ツール, ツール, basis64 機器, 機器, ダヤク・クニャー翻訳者, ダヤク・クニャー, クニャー辞書, クニャー語, ダヤク翻訳者, ダヤク語翻訳者, ダヤク・クニャー辞書",
+      "contentTitle": "ダヤク・クニャー語を簡単に翻訳！",
+      "contentDescription": "BASIS-64 は、NLP (自然言語処理) ベースのダヤク・クニャー翻訳者を含む、さまざまな完全な機能を提供します。一部のプレミアム機能は、アクセスするために支払いが必要です。1日間の無料トライアルを入手するには、Google アカウントでログインしてください。このウェブサイトをリロードするには、CTRL + SHIFT + R を同時に押してください。",
+      "visitorTitle": "今日の訪問者数",
+      "dictionaryTitle": "ダヤク・クニャー語彙の数",
+      "accuracyTitle": "翻訳者の精度"
+    },
+    "profile": {
+      "title": "ユーザープロフィール",
+      "googleUser": "Google ユーザー",
+      "accountInformation": "アカウント情報",
+      "name": "名前",
+      "email": "メール",
+      "status": "アクティベーションステータス",
+      "expired": "アクティベーション残り",
+      "date": "アクティベーション制限",
+      "deleteAccount": "アカウントを削除",
+      "activated": "アカウントがアクティブ化されました",
+      "activationExpired": "アクティベーションの有効期限切れ",
+      "notActivated": "アクティブ化されていません",
+      "activatedDescription": "あなたのアカウントは、ウェブサイト管理者によってアクティブ化されました。",
+      "expiredDescription": "あなたのアカウントは有効期限切れです。再アクティブ化してください。",
+      "notActivatedDescription": "あなたのアカウントはアクティブ化されていません。プレミアム機能にアクセスできません。"
+    },
+    "developer": {
+      "title": "開発者オプション",
+      "description": "この機能はまだ作成していません。API の使用を可能にする開発者オプション機能は、2025 年 6 月 30 日にリリースされます。"
+    },
+    "price": {
+      "title": "サブスクリプションを開始",
+      "contentTitle": "サブスクリプションを開始しましょう！",
+      "contentDescription": "あなたが選んだパッケージに従ってサブスクリプションを行うことで、アカウントをアクティブ化できます。",
+      "hematTitle": "節約パッケージ",
+      "hematDescription": "最も手頃な価格でのアクティベーション。短期的なニーズや、BASIS-64 のプレミアム機能を試すのに最適です。",
+      "hematPrice": "5,000 ルピア",
+      "hematDuration": "週間",
+      "hematFeature1": "1週間、AI NLPベースのダヤク・クニャー翻訳者への無制限アクセス",
+      "remixTitle": "リミックスパッケージ",
+      "remixDescription": "頻繁な更新を必要とせずに、より長いアクセスを必要とする人のためのミディアムオプション。期間と価格のバランスが取れています。",
+      "remixPrice": "15,000 ルピア",
+      "remixDuration": "月",
+      "remixFeature1": "1か月間、AI NLPベースのダヤク・クニャー翻訳者への無制限アクセス",
+      "phoenixTitle": "フェニックスパッケージ",
+      "phoenixDescription": "最長のパッケージ。1年以内の長期アクティベーションを希望する忠実なユーザーに最適です。",
+      "phoenixPrice": "120,000 ルピア",
+      "phoenixDuration": "年",
+      "phoenixFeature1": "1年間、AI NLPベースのダヤク・クニャー翻訳者への無制限アクセス"
+    },
+    "payment": {
+      "title": "アクティベーションと支払い",
+      "contentTitle": "アクティベーションと支払い",
+      "contentDescription": "QRIS を介してオンラインで支払いを行います。スクリーンショットを撮り、ウェブサイト管理者の WhatsApp 経由で支払い証明書を送信してください。",
+      "step1Title": "ステップ 1",
+      "step1Description": "支払いを行うには、DANA または Gopay アプリケーションを使用して、下の QRIS をスキャンします。",
+      "step2Title": "ステップ 2",
+      "step2Description": "WhatsApp 経由で管理者に連絡し、支払い証明書を送信して、アクティブ化できるようにメールアドレスを管理者に伝えてください。",
+      "step2Button": "WhatsApp 経由で管理者に連絡する",
+      "step3Title": "ステップ 2",
+      "step3Description": "支払いを行うには、DANA または Gopay アプリケーションを使用して、下の QRIS をスキャンします。",
+      "step3Button": "アカウントプロフィールを表示するには、ここをクリックしてください"
+    },
+    "feedback": {
+      "title": "Feedback",
+      "contentTitle": "フィードバックをお寄せください",
+      "contentDescription": "ご意見やご提案をお待ちしております。このウェブサイトにバグがある場合はお知らせください。",
+      "name": "名前",
+      "message": "メッセージ",
+      "messagePlaceholder": "ここにメッセージを入力してください...",
+      "send": "送信"
+    },
+    "faq": {
+      "title": "よくある質問",
+      "q1": "BASIS-64 でアカウントは安全ですか？",
+      "a1": "はい、データ交換中のアカウントのセキュリティを保証します。サーバーに送信されるすべての情報は、データ暗号化に AES、キー交換プロセスに RSA を使用して、エンドツーエンドで暗号化されます。",
+      "q2": "このウェブサイトの管理者または所有者は、私のアカウントのパスワードを知っていますか？",
+      "a2": "いいえ、ウェブサイトの所有者として、あなたのアカウントのパスワードを読むことはできません。すべてのパスワードは、安全なアルゴリズムを使用して暗号化された形式で保存され、管理者を含め、誰にも見ることができません。",
+      "q3": "アカウントのパスワードを忘れた場合はどうすればよいですか？",
+      "a3": "アカウントのパスワードを忘れた場合は、ログインページの「パスワードを忘れた場合」をクリックして、パスワードを変更できます。",
+      "q4": "この翻訳者の精度はどのくらいですか？",
+      "a4": "現在、NLP (自然言語処理) テクノロジーを使用して、最大 90% の精度でダヤク・クニャー語をより正確に翻訳しています。このテクノロジーは、システムが文の構造と意味を理解するのに役立つため、翻訳は単語ごとではなく、文脈に応じたものになります。これにより、ユーザーは、より自然で、理解しやすく、元の意味に近い翻訳結果を得ることができます。",
+      "q5": "支払い方法を教えてください。",
+      "a5": "<a href=\"payment.html\">QRIS</a> または、管理者と直接会って現金で支払いを行うことができます。QRIS で支払いを行う場合は、支払い証明書を送信すると、自動的にアクティベートされます。アクティベーションに問題がある場合は、<a href=\"https://wa.me/+622211509216\" target=\"_blank\">WhatsApp 経由で管理者</a>に連絡できます。",
+      "q6": "BASIS-64 ダヤク・クニャー翻訳者は無料ですか？",
+      "a6": "いいえ、BASIS-64 ダヤク・クニャー翻訳者は<strong>無料ではありません。</strong>この機能にアクセスするには、ユーザーはサブスクリプションが必要です。利用可能なパッケージオプションについては、<a href=\"price.html\" class=\"text-blue-600 underline\">こちら</a>をご覧ください。ただし、BASIS-64 は、特定のプロモーション期間中に無料アクセスを時々提供しますが、これは非常にまれです。"
+    },
+    "about": {
+      "title": "私たちについて",
+      "contentTitle": "私たちは誰ですか？",
+      "contentDescription": "当社は、NLP (自然言語処理) を使用した、世界初のダヤク・クニャー語翻訳サービスプロバイダーであり、正確な翻訳を可能にするソフトウェア会社です。当社の翻訳者は、文を翻訳したり、「私は教師です」を「ca guru keq」に、「もう食べましたか」を「lepe ne ikoq uman」のように語順を変更したりすることもできます。当社の翻訳者は、単純な単語ごとの翻訳のみを行う以前の世代の翻訳者とは異なります。",
+      "contactTitle": "お問い合わせ"
+    },
+    "login": {
+      "loginTitle": "BASIS-64 にログイン",
+      "login": "ログイン",
+      "email": "メール",
+      "password": "パスワード",
+      "forgotPassword": "パスワードをお忘れですか？ パスワードをリセット",
+      "createAccount": "アカウントをお持ちでない場合は作成してください"
+    },
+    "register": {
+      "title": "アカウントを作成",
+      "contentTitle": "Google で登録しましょう！",
+      "contentDescription": "アカウント登録プロセスが簡単かつ迅速に行われるようにします。セキュリティを維持し、スパム行為を防ぎ、より快適な体験を提供するために、Google アカウントが必要です。",
+      "loginWithGoogle": "Google で登録",
+      "agree": "<a href=\"terms.html\" class=\"text-blue-600 font-semibold ml-1\">このサイトの利用規約</a>に同意します",
+      "register": "登録",
+      "login": "すでにアカウントをお持ちですか？ <a href=\"login.html\" class=\"text-blue-600 font-semibold\">ログイン</a>",
+      "about": "私たちについて",
+      "contact": "お問い合わせ",
+      "terms": "利用規約",
+      "passwordInvalid": "パスワードを入力する必要があります。",
+      "confirmPasswordInvalid": "パスワードと確認が一致する必要があります。",
+      "emailRegistered": "このメールアドレスはすでに登録されています。 ログインしてください。"
+    },
+    "forgot-password": {
+      "title": "パスワードをお忘れですか",
+      "contentTitle": "アカウントの回復",
+      "contentDescription": "パスワードを忘れた場合は、Gmail アカウントに OTP を送信します。スパムまたは迷惑メールフォルダを含む、受信トレイ全体を確認してください。",
+      "resetPassword": "パスワードをリセット",
+      "emailError": "メールアドレスが正しくありません。",
+      "getOTP": "OTP を取得",
+      "notVerified": "OTP を確認できません。",
+      "verifyOTP": "OTP を確認",
+      "changePassword": "パスワードを変更",
+      "login": "すでにアカウントをお持ちですか？ <a href=\"login.html\" class=\"text-blue-600 font-semibold\">ログイン</a>",
+      "about": "私たちについて",
+      "terms": "利用規約",
+      "SEND_OTP_FAILED": "OTP をリクエストできませんでした。",
+      "OTP_REQUESTED": "以前に OTP をリクエストしました。Gmail アカウントの受信トレイを確認してください。",
+      "TRY_ERROR": "ブルートフォースが検出されました。後でもう一度お試しください。",
+      "OTP_NOT_SAME": "OTP が一致しません。もう一度お試しください。",
+      "UNKNOWN_ERROR": "OTP が期限切れです。アカウントを回復するために新しい OTP をリクエストしてください。",
+      "remainingTime": "新しい OTP をリクエストするには、<SECONDS_PLACEHOLDER> 秒待ってください",
+      "requestNewOTP": "新しい OTP をリクエスト",
+      "required": "パスワードを入力する必要があります。",
+      "confirmPassword": "パスワードと確認パスワードが一致する必要があります。"
+    }
+  },
+  "messages": {
+    "info": "情報",
+    "close": "閉じる",
+    "loading": "ページを読み込んでいます...",
+    "loginLoading": "ログインしています。しばらくお待ちください...",
+    "LOGIN_FAILED": "ログインに失敗しました。",
+    "WRONG_PASSWORD": "ユーザー名またはパスワードが間違っています。",
+    "ACCOUNT_USED": "このアカウントは、すでに別のデバイスで使用されています。",
+    "INVALID_SESSION_ID": "セッションが期限切れになりました。このページを更新してください。",
+    "ACCOUNT_NOT_FOUND": "このアカウントは、まだ BASIS-64 に登録されていません。",
+    "logoutLoading": "ログアウトしています。しばらくお待ちください..."
+  },
+  "etc": {
+    "login": "ログイン",
+    "register": "アカウントを登録",
+    "logout": "ログアウト",
+    "days": "日",
+    "dayNames": [
+      "月曜日",
+      "火曜日",
+      "水曜日",
+      "木曜日",
+      "金曜日",
+      "土曜日",
+      "日曜日"
+    ]
+  }
+}

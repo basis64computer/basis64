@@ -1,0 +1,203 @@
+{
+  "author": "BASIS-64",
+  "sidenav": {
+    "index": "Pagina iniziale",
+    "profile": "Visualizza profilo",
+    "developer": "Opzioni sviluppatore",
+    "price": "Prezzi del prodotto",
+    "payment": "Attivazione e pagamento",
+    "feedback": "Feedback",
+    "faq": "FAQ",
+    "about": "Chi siamo",
+    "googleUser": "Utente Google",
+    "loginTitle": "Non hai effettuato l'accesso?",
+    "loginDescription": "Accedi per ottenere una prova gratuita di 1 giorno.",
+    "login": "Accedi",
+    "register": "Crea account",
+    "logout": "Disconnetti"
+  },
+  "navbar": {
+    "search": "Cerca in BASIS-64",
+    "profile": "Profilo utente",
+    "login": "Accedi",
+    "logout": "Disconnetti"
+  },
+  "footer": {
+    "copyright": "BASIS-64™. Tutti i diritti riservati.",
+    "about": "Chi siamo",
+    "privacy": "Informativa sulla privacy",
+    "terms": "Termini e condizioni",
+    "contact": "Contatto"
+  },
+  "pages": {
+    "index": {
+      "title": "BASIS-64 - Traduttore Dayak Kenyah",
+      "metaName": "BASIS-64 - Traduttore Dayak Kenyah",
+      "alternativeMetaName": "BASIS-64",
+      "metaDescription": "BASIS-64 fornisce il primo traduttore Dayak Kenyah al mondo ed è dotato di tecnologia NLP e intelligenza artificiale.",
+      "metaKeywords": "basis-64, basis64, computer basis-64, computer basis64, computer, komputer, strumenti basis64, strumenti, attrezzatura basis64, attrezzatura, traduttore Dayak Kenyah, Dayak Kenyah, dizionario Kenyah, lingua Kenyah, traduttore Dayak, traduttore lingua Dayak, dizionario Dayak Kenyah",
+      "contentTitle": "Traduci Dayak Kenyah facilmente!",
+      "contentDescription": "BASIS-64 offre una varietà di funzionalità complete, incluso un traduttore Dayak Kenyah basato su NLP (elaborazione del linguaggio naturale). Alcune funzionalità premium richiedono il pagamento per l'accesso. Accedi con il tuo account Google per ottenere una prova gratuita di 1 giorno. Premi CTRL + SHIFT + R contemporaneamente per ricaricare questo sito web.",
+      "visitorTitle": "Numero di visitatori oggi",
+      "dictionaryTitle": "Numero di vocaboli Dayak Kenyah",
+      "accuracyTitle": "Precisione del traduttore"
+    },
+    "profile": {
+      "title": "Profilo utente",
+      "googleUser": "Utente Google",
+      "accountInformation": "Informazioni sull'account",
+      "name": "Nome",
+      "email": "Email",
+      "status": "Stato di attivazione",
+      "expired": "Attivazione rimanente",
+      "date": "Limite di attivazione",
+      "deleteAccount": "Elimina account",
+      "activated": "Account attivato",
+      "activationExpired": "Attivazione scaduta",
+      "notActivated": "Non attivato",
+      "activatedDescription": "Il tuo account è stato attivato dall'amministratore del sito web.",
+      "expiredDescription": "Il tuo account è scaduto, riattivalo.",
+      "notActivatedDescription": "Il tuo account non è attivato, non puoi accedere alle funzionalità premium."
+    },
+    "developer": {
+      "title": "Opzioni sviluppatore",
+      "description": "Non abbiamo ancora creato questa funzionalità, la funzionalità delle opzioni sviluppatore che consente l'utilizzo delle API verrà rilasciata il 30 giugno 2025."
+    },
+    "price": {
+      "title": "Inizia l'abbonamento",
+      "contentTitle": "Inizia l'abbonamento!",
+      "contentDescription": "Puoi attivare il tuo account abbonandoti in base al pacchetto che scegli.",
+      "hematTitle": "Pacchetto Economico",
+      "hematDescription": "Attivazione al prezzo più conveniente. Adatto per esigenze a breve termine e per provare le funzionalità premium di BASIS-64.",
+      "hematPrice": "Rp 5.000",
+      "hematDuration": "settimana",
+      "hematFeature1": "Accesso illimitato al traduttore Dayak Kenyah basato su AI NLP per una settimana",
+      "remixTitle": "Pacchetto Remix",
+      "remixDescription": "L'opzione intermedia per coloro che necessitano di un accesso più lungo senza frequenti rinnovi. Equilibrato tra durata e prezzo.",
+      "remixPrice": "Rp 15.000",
+      "remixDuration": "mese",
+      "remixFeature1": "Accesso illimitato al traduttore Dayak Kenyah basato su AI NLP per un mese",
+      "phoenixTitle": "Pacchetto Phoenix",
+      "phoenixDescription": "Il pacchetto con la durata più lunga. Ideale per gli utenti fedeli che desiderano un'attivazione a lungo termine entro un anno.",
+      "phoenixPrice": "Rp 120.000",
+      "phoenixDuration": "anno",
+      "phoenixFeature1": "Accesso illimitato al traduttore Dayak Kenyah basato su AI NLP per un anno"
+    },
+    "payment": {
+      "title": "Attivazione e pagamento",
+      "contentTitle": "Attivazione e pagamento",
+      "contentDescription": "Effettua pagamenti online tramite QRIS. Fai uno screenshot e invia la prova del pagamento tramite WhatsApp all'amministratore del sito web.",
+      "step1Title": "Passaggio 1",
+      "step1Description": "Scansiona il QRIS qui sotto utilizzando l'applicazione DANA o Gopay per effettuare un pagamento.",
+      "step2Title": "Passaggio 2",
+      "step2Description": "Contatta l'amministratore tramite WhatsApp e invia la prova del pagamento e comunica all'amministratore la tua email in modo che possa attivarla.",
+      "step2Button": "Contatta l'amministratore tramite WhatsApp",
+      "step3Title": "Passaggio 2",
+      "step3Description": "Scansiona il QRIS qui sotto utilizzando l'applicazione DANA o Gopay per effettuare un pagamento.",
+      "step3Button": "Clicca qui per visualizzare il profilo dell'account"
+    },
+    "feedback": {
+      "title": "Feedback",
+      "contentTitle": "Dacci un feedback",
+      "contentDescription": "Apprezziamo molto il tuo contributo e i tuoi suggerimenti e facci sapere se ci sono bug su questo sito web.",
+      "name": "Nome",
+      "message": "Messaggio",
+      "messagePlaceholder": "Digita qui il tuo messaggio...",
+      "send": "Invia"
+    },
+    "faq": {
+      "title": "FAQ",
+      "q1": "Il mio account è al sicuro su BASIS-64?",
+      "a1": "Sì, garantiamo la sicurezza del tuo account durante lo scambio di dati. Tutte le informazioni inviate ai nostri server sono crittografate end-to-end utilizzando AES per la crittografia dei dati e RSA per il processo di scambio delle chiavi.",
+      "q2": "L'amministratore o il proprietario di questo sito web conosce la password del mio account?",
+      "a2": "No, noi come proprietari del sito web non possiamo leggere la password del tuo account. Tutte le password sono archiviate in forma crittografata utilizzando un algoritmo sicuro e non possono essere visualizzate da nessuno, inclusi gli amministratori.",
+      "q3": "Cosa succede se dimentico la password del mio account?",
+      "a3": "Se dimentichi la password del tuo account, puoi cambiarla cliccando su 'Password dimenticata' nella pagina di login.",
+      "q4": "Quanto è preciso questo traduttore?",
+      "a4": "Attualmente, utilizziamo la tecnologia NLP (elaborazione del linguaggio naturale) per tradurre il Dayak Kenyah in modo più accurato, con una precisione fino al 90%. Questa tecnologia aiuta il sistema a comprendere la struttura e il significato delle frasi, quindi le traduzioni non sono solo parola per parola, ma anche in base al contesto. In questo modo, gli utenti possono ottenere risultati di traduzione più naturali, facili da capire e vicini al significato originale.",
+      "q5": "Come posso effettuare un pagamento?",
+      "a5": "Puoi effettuare pagamenti tramite <a href=\"payment.html\">QRIS</a> o in contanti incontrando direttamente l'amministratore. Puoi ottenere l'attivazione automatica dopo aver inviato la prova del pagamento se paghi tramite QRIS. Puoi contattare <a href=\"https://wa.me/+622211509216\" target=\"_blank\">l'amministratore tramite WhatsApp</a> se ci sono problemi con l'attivazione.",
+      "q6": "Il traduttore Dayak Kenyah BASIS-64 è gratuito?",
+      "a6": "No, il traduttore Dayak Kenyah BASIS-64 <strong>non è gratuito.</strong> Gli utenti devono abbonarsi per accedere a questa funzionalità. Vedi le opzioni del pacchetto disponibili <a href=\"price.html\" class=\"text-blue-600 underline\">qui.</a> Tuttavia, BASIS-64 occasionalmente apre l'accesso gratuito durante determinati periodi promozionali — ma questo è molto raro."
+    },
+    "about": {
+      "title": "Chi siamo",
+      "contentTitle": "Chi siamo?",
+      "contentDescription": "Siamo una società di software e il primo fornitore di servizi di traduzione della lingua Dayak Kenyah al mondo che utilizza NLP (elaborazione del linguaggio naturale) che consente una traduzione accurata perché il nostro traduttore può tradurre frasi e persino cambiare l'ordine delle parole, ad esempio 'Sono un insegnante' in 'ca guru keq' o 'Hai già mangiato' in 'lepe ne ikoq uman'. Il nostro traduttore è diverso dai traduttori di generazione precedente che sostituiscono solo semplici parole.",
+      "contactTitle": "Contattaci"
+    },
+    "login": {
+      "loginTitle": "Accedi a BASIS-64",
+      "login": "Accedi",
+      "email": "Email",
+      "password": "Password",
+      "forgotPassword": "Password dimenticata? Resetta password",
+      "createAccount": "Non hai un account? Crea un account"
+    },
+    "register": {
+      "title": "Crea account",
+      "contentTitle": "Registrati con Google!",
+      "contentDescription": "Garantiamo che il processo di registrazione dell'account sia facile e veloce. Abbiamo bisogno del tuo account Google per mantenere la sicurezza e prevenire attività di spam, per un'esperienza più confortevole.",
+      "loginWithGoogle": "Registrati con Google",
+      "agree": "Accetto i <a href=\"terms.html\" class=\"text-blue-600 font-semibold ml-1\">Termini e condizioni di questo sito</a>",
+      "register": "Registrati",
+      "login": "Hai già un account? <a href=\"login.html\" class=\"text-blue-600 font-semibold\">Accedi</a>",
+      "about": "Chi siamo",
+      "contact": "Contattaci",
+      "terms": "Termini di servizio",
+      "passwordInvalid": "La password deve essere compilata.",
+      "confirmPasswordInvalid": "La password e la conferma devono essere uguali.",
+      "emailRegistered": "Questa email è già registrata. Per favore, accedi."
+    },
+    "forgot-password": {
+      "title": "Password dimenticata",
+      "contentTitle": "Recupero account",
+      "contentDescription": "Se hai dimenticato la password, invieremo un OTP al tuo account Gmail. Assicurati di controllare l'intera casella di posta in arrivo, inclusa la cartella spam o posta indesiderata.",
+      "resetPassword": "Resetta password",
+      "emailError": "Indirizzo email non corretto.",
+      "getOTP": "Ottieni OTP",
+      "notVerified": "OTP non può essere verificato.",
+      "verifyOTP": "Verifica OTP",
+      "changePassword": "Cambia password",
+      "login": "Hai già un account? <a href=\"login.html\" class=\"text-blue-600 font-semibold\">Accedi</a>",
+      "about": "Chi siamo",
+      "terms": "Termini di servizio",
+      "SEND_OTP_FAILED": "Impossibile richiedere OTP.",
+      "OTP_REQUESTED": "Hai già richiesto un OTP in precedenza, controlla la posta in arrivo del tuo account Gmail.",
+      "TRY_ERROR": "Rilevato tentativo di accesso non autorizzato, riprova più tardi.",
+      "OTP_NOT_SAME": "OTP non corrispondente, riprova.",
+      "UNKNOWN_ERROR": "OTP scaduto, richiedi un nuovo OTP per recuperare il tuo account.",
+      "remainingTime": "Attendi <SECONDS_PLACEHOLDER> secondi per richiedere un nuovo OTP",
+      "requestNewOTP": "Richiedi nuovo OTP",
+      "required": "La password deve essere compilata.",
+      "confirmPassword": "La password e la password di conferma devono essere uguali."
+    }
+  },
+  "messages": {
+    "info": "Info",
+    "close": "Chiudi",
+    "loading": "Caricamento pagina...",
+    "loginLoading": "Attendere, accesso in corso...",
+    "LOGIN_FAILED": "Impossibile accedere.",
+    "WRONG_PASSWORD": "Nome utente o password errati.",
+    "ACCOUNT_USED": "Questo account è già in uso su un altro dispositivo.",
+    "INVALID_SESSION_ID": "Sessione scaduta, aggiorna questa pagina.",
+    "ACCOUNT_NOT_FOUND": "Questo account non è ancora registrato su BASIS-64.",
+    "logoutLoading": "Attendere, disconnessione in corso..."
+  },
+  "etc": {
+    "login": "Accedi",
+    "register": "Registra account",
+    "logout": "Disconnetti",
+    "days": "giorni",
+    "dayNames": [
+      "Lunedì",
+      "Martedì",
+      "Mercoledì",
+      "Giovedì",
+      "Venerdì",
+      "Sabato",
+      "Domenica"
+    ]
+  }
+}

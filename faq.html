@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html class="" x-data="data()" lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <title data-i18n="pages.faq.title">FAQ</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.12.1/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./dist/output.css" />
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <script src="./assets/js/init-alpine.js"></script>
+  </head>
+  <body>
+    <div class="flex h-screen bg-gray-50 dark:bg-neutral-900" :class="{ 'overflow-hidden': isSideMenuOpen }" id="pageContent">
+      <!-- Desktop sidebar -->
+      <!-- Mobile sidebar -->
+      <!-- Backdrop -->
+      <aside class="inset-y-0 z-20 flex-shrink-0 w-64 overflow-y-auto bg-white dark:bg-neutral-800 border-r dark:border-red" x-show="isSideMenuOpen" x-transition:enter="transition ease-in-out duration-15" x-transition:enter-start="opacity-0 transform -translate-x-20" x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in-out duration-15" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0 transform -translate-x-20" id="sidenav-main">
+        
+      </aside>
+      <div class="flex flex-col flex-1 w-full h-full">
+        <header class="z-10 py-4 bg-white border-b dark:bg-neutral-800" id="navbar">
+          
+        </header>
+        <main class="flex flex-col h-full overflow-y-auto">
+          <div class="container px-6 mx-auto grid hidden" id="searchLayout">
+          </div>
+          <div class="container p-4 mx-auto grid" id="mainLayout">
+            
+<div id="accordion-color" data-accordion="collapse" data-active-classes="bg-blue-100 dark:bg-neutral-800 text-blue-600 dark:text-white">
+  <h2 id="accordion-color-heading-1">
+    <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-800 dark:border-gray-700 dark:text-gray-400 hover:bg-blue-100 dark:hover:bg-gray-800 gap-3" data-accordion-target="#accordion-color-body-1" aria-expanded="true" aria-controls="accordion-color-body-1">
+      <span data-i18n="pages.faq.q1">Apakah akun saya aman di BASIS-64?</span>
+      <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+      </svg>
+    </button>
+  </h2>
+  <div id="accordion-color-body-1" class="hidden" aria-labelledby="accordion-color-heading-1">
+    <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-neutral-900">
+      <p class="text-gray-500 dark:text-gray-400" data-i18n="pages.faq.a1">Ya, kami menjamin keamanan akun Anda selama pertukaran data. Semua informasi yang dikirimkan ke server kami dienkripsi end-to-end menggunakan AES untuk enkripsi data dan RSA untuk proses pertukaran kunci.</p>
+    </div>
+  </div>
+  <h2 id="accordion-color-heading-2">
+    <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-800 dark:border-gray-700 dark:text-gray-400 hover:bg-blue-100 dark:hover:bg-gray-800 gap-3" data-accordion-target="#accordion-color-body-2" aria-expanded="false" aria-controls="accordion-color-body-2">
+      <span data-i18n="pages.faq.q2">Apakah admin atau pemilik website ini tahu kata sandi akun saya?</span>
+      <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+      </svg>
+    </button>
+  </h2>
+  <div id="accordion-color-body-2" class="hidden" aria-labelledby="accordion-color-heading-2">
+    <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
+      <p class="text-gray-500 dark:text-gray-400" data-i18n="pages.faq.a2">Tidak, kami sebagai pemilik website tidak dapat membaca kata sandi akun Anda. Semua kata sandi disimpan dalam bentuk terenkripsi menggunakan algoritma yang aman dan tidak dapat dilihat oleh siapa pun, termasuk admin.</p>
+    </div>
+  </div>
+  <h2 id="accordion-color-heading-3">
+    <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-800 dark:border-gray-700 dark:text-gray-400 hover:bg-blue-100 dark:hover:bg-gray-800 gap-3" data-accordion-target="#accordion-color-body-3" aria-expanded="false" aria-controls="accordion-color-body-3">
+      <span data-i18n="pages.faq.q3">Bagaimana jika saya lupa kata sandi akun saya?</span>
+      <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+      </svg>
+    </button>
+  </h2>
+  <div id="accordion-color-body-3" class="hidden" aria-labelledby="accordion-color-heading-3">
+    <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
+      <p class="text-gray-500 dark:text-gray-400" data-i18n="pages.faq.a3">Jika Anda lupa kata sandi akun Anda, Anda dapat mengubah password Anda dengan cara mengklik 'Lupa Password' pada halaman login.</p>
+    </div>
+  </div>
+  <h2 id="accordion-color-heading-4">
+    <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-800 dark:border-gray-700 dark:text-gray-400 hover:bg-blue-100 dark:hover:bg-gray-800 gap-3" data-accordion-target="#accordion-color-body-4" aria-expanded="false" aria-controls="accordion-color-body-4">
+      <span data-i18n="pages.faq.q4">Seberapa akurat translator ini?</span>
+      <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+      </svg>
+    </button>
+  </h2>
+  <div id="accordion-color-body-4" class="hidden" aria-labelledby="accordion-color-heading-4">
+    <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
+      <p class="text-gray-500 dark:text-gray-400" data-i18n="pages.faq.a4">Saat ini, kami menggunakan teknologi <strong>NLP (Natural Language Processing)</strong> untuk menerjemahkan bahasa Dayak Kenyah dengan lebih akurat, dengan akurasi hingga 90%. Teknologi ini membantu sistem memahami struktur dan makna kalimat, sehingga terjemahan tidak hanya berdasarkan kata per kata, tetapi juga sesuai dengan konteks. Dengan begitu, pengguna bisa mendapatkan hasil terjemahan yang lebih alami, mudah dipahami, dan mendekati makna aslinya.</p>
+    </div>
+  </div>
+  <h2 id="accordion-color-heading-5">
+    <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-800 dark:border-gray-700 dark:text-gray-400 hover:bg-blue-100 dark:hover:bg-gray-800 gap-3" data-accordion-target="#accordion-color-body-5" aria-expanded="false" aria-controls="accordion-color-body-5">
+      <span data-i18n="pages.faq.q5">Bagaimana cara melakukan pembayaran?</span>
+      <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+      </svg>
+    </button>
+  </h2>
+  <div id="accordion-color-body-5" class="hidden" aria-labelledby="accordion-color-heading-5">
+    <div class="p-5 border border-t-0 border-gray-200 dark:border-gray-700">
+      <p class="text-gray-500 dark:text-gray-400" data-i18n="pages.faq.a5">Anda dapat melakukan pembayaran melalui <a href="payment.html">QRIS</a> atau melalui cash dengan cara menemui admin secara langsung, Anda bisa mendapatkan aktivasi secara otomatis setelah mengirimkan bukti pengiriman jika Anda membayar melalui QRIS. Anda bisa menghubungi <a href="https://wa.me/+622211509216" target="_blank">admin melalui whatsapp</a> jika terdapat masalah dalam aktivasi.</p>
+    </div>
+  </div>
+  <h2 id="accordion-color-heading-6">
+    <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-gray-200 focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-800 dark:border-gray-700 dark:text-gray-400 hover:bg-blue-100 dark:hover:bg-gray-800 gap-3" data-accordion-target="#accordion-color-body-6" aria-expanded="false" aria-controls="accordion-color-body-6">
+      <span data-i18n="pages.faq.q6">Apakah penerjemah Dayak Kenyah BASIS-64 gratis?</span>
+      <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+      </svg>
+    </button>
+  </h2>
+  <div id="accordion-color-body-6" class="hidden" aria-labelledby="accordion-color-heading-6">
+    <div class="p-5 border border-t-0 border-gray-200 dark:border-gray-700">
+      <p class="text-gray-500 dark:text-gray-400" data-i18n="pages.faq.a6">Tidak, penerjemah Dayak Kenyah BASIS-64 <strong>tidak gratis.</strong> Pengguna perlu berlangganan untuk mengakses fitur ini. Lihat pilihan paket yang tersedia <a href="price.html" class="text-blue-600 underline">di sini.</a> Meski demikian, BASIS-64 sesekali membuka akses gratis dalam periode promosi tertentu — namun hal ini sangat jarang terjadi.
+</p>
+    </div>
+  </div>
+</div>
+
+          </div>
+            
+          <div class="h-full">
+            
+          </div>
+          <footer class="bg-white border-t dark:bg-neutral-800 inset-x-0 bottom-0" id="footer">
+              
+          </footer>
+          
+        </main>
+        
+      </div>
+    </div>
+    <!-- Message modal -->
+<div id="messageModal" tabindex="-1" aria-hidden="true" class="hidden overlay modal overflow-y-auto overflow-x-hidden fixed z-50 justify-center items-center w-full inset-0 h-[calc(100%)] max-h-full bg-black bg-opacity-50">
+          </div>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+        <script src="js/simple-datatables.min.js" crossorigin="anonymous"></script>
+        <script src="js/i18next.min.js"></script>
+        <script src="js/i18nextHttpBackend.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <script src="js/icons.js"></script>
+        <script src="js/cookie.js"></script>
+        <script src="js/visitor.js"></script>
+        <script src="js/encrypt.js"></script>
+        <script src="js/initialize.js"></script>
+        <script src="js/i18n.js"></script>
+        <script type="text/javascript">
+          let page_id = "faq";
+          
+          function callback() {
+
+          }
+        </script>
+  </body>
+</html>

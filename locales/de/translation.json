@@ -1,0 +1,203 @@
+{
+  "author": "BASIS-64",
+  "sidenav": {
+    "index": "Startseite",
+    "profile": "Profil anzeigen",
+    "developer": "Entwickleroptionen",
+    "price": "Produktpreise",
+    "payment": "Aktivierung & Zahlung",
+    "feedback": "Feedback",
+    "faq": "FAQ",
+    "about": "Über uns",
+    "googleUser": "Google-Nutzer",
+    "loginTitle": "Nicht angemeldet?",
+    "loginDescription": "Melden Sie sich an, um eine 1-tägige kostenlose Testversion zu erhalten.",
+    "login": "Anmelden",
+    "register": "Konto erstellen",
+    "logout": "Abmelden"
+  },
+  "navbar": {
+    "search": "BASIS-64 durchsuchen",
+    "profile": "Benutzerprofil",
+    "login": "Anmelden",
+    "logout": "Abmelden"
+  },
+  "footer": {
+    "copyright": "BASIS-64™. Alle Rechte vorbehalten.",
+    "about": "Über uns",
+    "privacy": "Datenschutzrichtlinie",
+    "terms": "Nutzungsbedingungen",
+    "contact": "Kontakt"
+  },
+  "pages": {
+    "index": {
+      "title": "BASIS-64 - Dayak Kenyah Übersetzer",
+      "metaName": "BASIS-64 - Dayak Kenyah Übersetzer",
+      "alternativeMetaName": "BASIS-64",
+      "metaDescription": "BASIS-64 bietet den ersten Dayak Kenyah Übersetzer der Welt und ist mit NLP-Technologie und künstlicher Intelligenz ausgestattet.",
+      "metaKeywords": "basis-64, basis64, basis-64 computer, basis64 computer, computer, komputer, basis64 tools, tools, basis64 ausrüstung, ausrüstung, Dayak Kenyah übersetzer, Dayak Kenyah, Kenyah wörterbuch, Kenyah sprache, Dayak übersetzer, Dayak sprachübersetzer, Dayak Kenyah wörterbuch",
+      "contentTitle": "Übersetzen Sie Dayak Kenyah ganz einfach!",
+      "contentDescription": "BASIS-64 bietet eine Vielzahl umfassender Funktionen, darunter einen NLP-basierten (Natural Language Processing) Dayak Kenyah Übersetzer. Einige Premium-Funktionen sind kostenpflichtig. Melden Sie sich mit Ihrem Google-Konto an, um eine 1-tägige kostenlose Testversion zu erhalten. Drücken Sie gleichzeitig STRG + UMSCHALT + R, um diese Website neu zu laden.",
+      "visitorTitle": "Anzahl der Besucher heute",
+      "dictionaryTitle": "Anzahl der Dayak Kenyah Vokabeln",
+      "accuracyTitle": "Genauigkeit des Übersetzers"
+    },
+    "profile": {
+      "title": "Benutzerprofil",
+      "googleUser": "Google-Nutzer",
+      "accountInformation": "Kontoinformationen",
+      "name": "Name",
+      "email": "E-Mail",
+      "status": "Aktivierungsstatus",
+      "expired": "Verbleibende Aktivierung",
+      "date": "Aktivierungslimit",
+      "deleteAccount": "Konto löschen",
+      "activated": "Konto aktiviert",
+      "activationExpired": "Aktivierung abgelaufen",
+      "notActivated": "Nicht aktiviert",
+      "activatedDescription": "Ihr Konto wurde vom Website-Administrator aktiviert.",
+      "expiredDescription": "Ihr Konto ist abgelaufen, bitte reaktivieren Sie es.",
+      "notActivatedDescription": "Ihr Konto ist nicht aktiviert, Sie können nicht auf Premium-Funktionen zugreifen."
+    },
+    "developer": {
+      "title": "Entwickleroptionen",
+      "description": "Wir haben diese Funktion noch nicht erstellt, die Entwickleroptionsfunktion, die die API-Nutzung ermöglicht, wird am 30. Juni 2025 veröffentlicht."
+    },
+    "price": {
+      "title": "Abonnement starten",
+      "contentTitle": "Abonnieren Sie jetzt!",
+      "contentDescription": "Sie können Ihr Konto aktivieren, indem Sie das von Ihnen gewählte Paket abonnieren.",
+      "hematTitle": "Spar-Paket",
+      "hematDescription": "Aktivierung zum günstigsten Preis. Geeignet für kurzfristige Bedürfnisse und zum Ausprobieren der Premium-Funktionen von BASIS-64.",
+      "hematPrice": "5.000 Rp",
+      "hematDuration": "Woche",
+      "hematFeature1": "Unbegrenzter Zugriff auf den KI-basierten NLP-Übersetzer für Dayak Kenyah für eine Woche",
+      "remixTitle": "Remix-Paket",
+      "remixDescription": "Die mittlere Option für diejenigen, die einen längeren Zugriff ohne häufige Verlängerungen benötigen. Ausgewogen zwischen Dauer und Preis.",
+      "remixPrice": "15.000 Rp",
+      "remixDuration": "Monat",
+      "remixFeature1": "Unbegrenzter Zugriff auf den KI-basierten NLP-Übersetzer für Dayak Kenyah für einen Monat",
+      "phoenixTitle": "Phoenix-Paket",
+      "phoenixDescription": "Das Paket mit der längsten Laufzeit. Ideal für treue Benutzer, die eine langfristige Aktivierung innerhalb eines Jahres wünschen.",
+      "phoenixPrice": "120.000 Rp",
+      "phoenixDuration": "Jahr",
+      "phoenixFeature1": "Unbegrenzter Zugriff auf den KI-basierten NLP-Übersetzer für Dayak Kenyah für ein Jahr"
+    },
+    "payment": {
+      "title": "Aktivierung & Zahlung",
+      "contentTitle": "Aktivierung & Zahlung",
+      "contentDescription": "Führen Sie Zahlungen online über QRIS durch. Machen Sie einen Screenshot und senden Sie Ihren Zahlungsnachweis über WhatsApp an den Website-Administrator.",
+      "step1Title": "Schritt 1",
+      "step1Description": "Scannen Sie den QRIS unten mit der DANA- oder Gopay-Anwendung, um eine Zahlung zu tätigen.",
+      "step2Title": "Schritt 2",
+      "step2Description": "Kontaktieren Sie den Administrator über WhatsApp und senden Sie den Zahlungsnachweis und teilen Sie dem Administrator Ihre E-Mail-Adresse mit, damit er sie aktivieren kann.",
+      "step2Button": "Administrator über WhatsApp kontaktieren",
+      "step3Title": "Schritt 2",
+      "step3Description": "Scannen Sie den QRIS unten mit der DANA- oder Gopay-Anwendung, um eine Zahlung zu tätigen.",
+      "step3Button": "Klicken Sie hier, um das Kontoprofil anzuzeigen"
+    },
+    "feedback": {
+      "title": "Feedback",
+      "contentTitle": "Geben Sie uns Feedback",
+      "contentDescription": "Wir freuen uns über Ihr Feedback und Ihre Vorschläge und informieren Sie uns, wenn es Fehler auf dieser Website gibt.",
+      "name": "Name",
+      "message": "Nachricht",
+      "messagePlaceholder": "Geben Sie hier Ihre Nachricht ein...",
+      "send": "Senden"
+    },
+    "faq": {
+      "title": "FAQ",
+      "q1": "Ist mein Konto bei BASIS-64 sicher?",
+      "a1": "Ja, wir garantieren die Sicherheit Ihres Kontos während des Datenaustauschs. Alle an unsere Server gesendeten Informationen werden Ende-zu-Ende mit AES für die Datenverschlüsselung und RSA für den Schlüsselaustauschprozess verschlüsselt.",
+      "q2": "Kennt der Administrator oder Eigentümer dieser Website mein Kontopasswort?",
+      "a2": "Nein, wir als Website-Betreiber können Ihr Kontopasswort nicht lesen. Alle Passwörter werden in verschlüsselter Form mit einem sicheren Algorithmus gespeichert und können von niemandem eingesehen werden, auch nicht von Administratoren.",
+      "q3": "Was ist, wenn ich mein Kontopasswort vergesse?",
+      "a3": "Wenn Sie Ihr Kontopasswort vergessen haben, können Sie Ihr Passwort ändern, indem Sie auf der Anmeldeseite auf „Passwort vergessen“ klicken.",
+      "q4": "Wie genau ist dieser Übersetzer?",
+      "a4": "Derzeit verwenden wir die NLP-Technologie (Natural Language Processing), um Dayak Kenyah genauer zu übersetzen, mit einer Genauigkeit von bis zu 90 %. Diese Technologie hilft dem System, die Struktur und Bedeutung von Sätzen zu verstehen, sodass Übersetzungen nicht nur Wort für Wort, sondern auch kontextbezogen erfolgen. Auf diese Weise können Benutzer Übersetzungsergebnisse erhalten, die natürlicher, leicht verständlich und der ursprünglichen Bedeutung nahe kommen.",
+      "q5": "Wie kann ich eine Zahlung vornehmen?",
+      "a5": "Sie können Zahlungen über <a href=\"payment.html\">QRIS</a> oder in bar leisten, indem Sie den Administrator persönlich treffen. Sie können eine automatische Aktivierung erhalten, nachdem Sie einen Zahlungsnachweis gesendet haben, wenn Sie über QRIS bezahlen. Sie können den <a href=\"https://wa.me/+622211509216\" target=\"_blank\">Administrator über WhatsApp</a> kontaktieren, wenn es Probleme bei der Aktivierung gibt.",
+      "q6": "Ist der Dayak Kenyah-Übersetzer BASIS-64 kostenlos?",
+      "a6": "Nein, der Dayak Kenyah-Übersetzer BASIS-64 ist <strong>nicht kostenlos.</strong> Benutzer müssen ein Abonnement abschließen, um auf diese Funktion zugreifen zu können. Sehen Sie sich die verfügbaren Paketoptionen <a href=\"price.html\" class=\"text-blue-600 underline\">hier</a> an. BASIS-64 bietet jedoch gelegentlich kostenlosen Zugang während bestimmter Werbezeiträume an — dies ist jedoch sehr selten."
+    },
+    "about": {
+      "title": "Über uns",
+      "contentTitle": "Wer sind wir?",
+      "contentDescription": "Wir sind ein Softwareunternehmen und der weltweit erste Dienstleister für Dayak Kenyah-Sprachübersetzer, der NLP (Natural Language Processing) verwendet, was eine genaue Übersetzung ermöglicht, da unser Übersetzer Sätze übersetzen und sogar die Wortreihenfolge ändern kann, z. B. 'Ich bin ein Lehrer' in 'ca guru keq' oder 'Hast du schon gegessen' in 'lepe ne ikoq uman'. Unser Übersetzer unterscheidet sich von Übersetzern der vorherigen Generation, die nur einfache Wort-für-Wort-Übersetzungen durchführen.",
+      "contactTitle": "Kontaktieren Sie uns"
+    },
+    "login": {
+      "loginTitle": "Anmelden bei BASIS-64",
+      "login": "Anmelden",
+      "email": "E-Mail",
+      "password": "Passwort",
+      "forgotPassword": "Passwort vergessen? Passwort zurücksetzen",
+      "createAccount": "Noch kein Konto? Konto erstellen"
+    },
+    "register": {
+      "title": "Konto erstellen",
+      "contentTitle": "Mit Google registrieren!",
+      "contentDescription": "Wir sorgen für einen einfachen und schnellen Prozess der Kontoregistrierung. Wir benötigen Ihr Google-Konto, um die Sicherheit zu gewährleisten und Spam-Aktivitäten zu verhindern, für ein komfortableres Erlebnis.",
+      "loginWithGoogle": "Mit Google registrieren",
+      "agree": "Ich stimme den <a href=\"terms.html\" class=\"text-blue-600 font-semibold ml-1\">Nutzungsbedingungen dieser Website</a> zu",
+      "register": "Registrieren",
+      "login": "Bereits ein Konto? <a href=\"login.html\" class=\"text-blue-600 font-semibold\">Anmelden</a>",
+      "about": "Über uns",
+      "contact": "Kontaktieren Sie uns",
+      "terms": "Nutzungsbedingungen",
+      "passwordInvalid": "Passwort muss ausgefüllt sein.",
+      "confirmPasswordInvalid": "Passwort und Bestätigung müssen übereinstimmen.",
+      "emailRegistered": "Diese E-Mail ist bereits registriert. Bitte melden Sie sich an."
+    },
+    "forgot-password": {
+      "title": "Passwort vergessen",
+      "contentTitle": "Konto wiederherstellen",
+      "contentDescription": "Wenn Sie Ihr Passwort vergessen haben, senden wir ein OTP an Ihr Gmail-Konto. Stellen Sie sicher, dass Sie Ihren gesamten Posteingang überprüfen, einschließlich des Spam- oder Junk-Ordners.",
+      "resetPassword": "Passwort zurücksetzen",
+      "emailError": "Falsche E-Mail-Adresse.",
+      "getOTP": "OTP abrufen",
+      "notVerified": "OTP kann nicht verifiziert werden.",
+      "verifyOTP": "OTP verifizieren",
+      "changePassword": "Passwort ändern",
+      "login": "Bereits ein Konto? <a href=\"login.html\" class=\"text-blue-600 font-semibold\">Anmelden</a>",
+      "about": "Über uns",
+      "terms": "Nutzungsbedingungen",
+      "SEND_OTP_FAILED": "OTP konnte nicht angefordert werden.",
+      "OTP_REQUESTED": "Sie haben zuvor ein OTP angefordert, überprüfen Sie den Posteingang Ihres Gmail-Kontos.",
+      "TRY_ERROR": "Brute-Force-Angriff erkannt, bitte versuchen Sie es später noch einmal.",
+      "OTP_NOT_SAME": "OTP stimmt nicht überein, bitte versuchen Sie es erneut.",
+      "UNKNOWN_ERROR": "OTP abgelaufen, fordern Sie ein neues OTP an, um Ihr Konto wiederherzustellen.",
+      "remainingTime": "Warten Sie <SECONDS_PLACEHOLDER> Sekunden, um ein neues OTP anzufordern",
+      "requestNewOTP": "Neues OTP anfordern",
+      "required": "Passwort muss ausgefüllt sein.",
+      "confirmPassword": "Passwort und Bestätigungspasswort müssen übereinstimmen."
+    }
+  },
+  "messages": {
+    "info": "Info",
+    "close": "Schließen",
+    "loading": "Seite wird geladen...",
+    "loginLoading": "Bitte warten Sie, Anmeldung läuft...",
+    "LOGIN_FAILED": "Anmeldung fehlgeschlagen.",
+    "WRONG_PASSWORD": "Falscher Benutzername oder Passwort.",
+    "ACCOUNT_USED": "Dieses Konto wird bereits auf einem anderen Gerät verwendet.",
+    "INVALID_SESSION_ID": "Sitzung abgelaufen, bitte aktualisieren Sie diese Seite.",
+    "ACCOUNT_NOT_FOUND": "Dieses Konto ist noch nicht bei BASIS-64 registriert.",
+    "logoutLoading": "Bitte warten Sie, Abmeldung läuft..."
+  },
+  "etc": {
+    "login": "Anmelden",
+    "register": "Konto registrieren",
+    "logout": "Abmelden",
+    "days": "Tage",
+    "dayNames": [
+      "Montag",
+      "Dienstag",
+      "Mittwoch",
+      "Donnerstag",
+      "Freitag",
+      "Samstag",
+      "Sonntag"
+    ]
+  }
+}
