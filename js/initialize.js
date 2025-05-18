@@ -377,7 +377,7 @@ const footer = `<div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-
                   </ul>
               </div>`;
 const copyright = "Copyright © BASIS-64 2025";
-let account;
+let account = null;
 let premiumPages = [];
 let pagesMenu;
 let isAdminPage = false;
@@ -572,7 +572,6 @@ if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localS
 initializePage();
 async function initializePage() {
         //$("#mainLayout").removeClass("flex").addClass("hidden");
-    //loadingModal("Loading page...");
 	account = await checkUser();
     handlePageID();
 
@@ -656,12 +655,19 @@ function isMobile() {
  * Mendapatkan informasi akun pengguna
  */
 async function checkUser() {
-    console.log("session..........");
+        if (!getCookie("session_id") || !getCookie("key")) {
+          loadingModal("Loading page...");
+        }
         let resultjson = await checkSession();
         console.log(resultjson);
 
         if (getCookie("session_id") && getCookie("key") && resultjson.ok) {
+          hideModal();
           let data = JSON.parse(await decryptAES(getCookie("key"), resultjson.ciphertext, stringToUint8Array(resultjson.iv)));
+          if (!data) {
+            console.log("account not found");
+            return null;
+            }
           isAdmin = data.admin;
             pagesMenu = data.pages;
             visitorsCount = data.visitors;
@@ -696,7 +702,7 @@ async function checkUser() {
         }
 
         await initialServerRequest("AES", {cipher: cipherText, device_id: localStorage.getItem("device_id")});
-        return await checkSession();
+        return await checkUser();
 
     }
 
