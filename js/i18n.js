@@ -25,8 +25,12 @@ function detectLanguage() {
   return 'id';
 }
 
-
-i18next
+let languageInitialized = false;
+function initializeLanguage() {
+  if (languageInitialized) {
+    return;
+  }
+  i18next
   .use(i18nextHttpBackend)
   .init({
     lng: detectLanguage(),
@@ -38,9 +42,14 @@ i18next
   }, function(err, t) {
     if (err) return console.error(err);
     updateContent();
+    languageInitialized = true;
   });
+}
 
 function updateContent() {
+  if (!languageInitialized) {
+    initializeLanguage();
+  }
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
     const value = i18next.t(key);

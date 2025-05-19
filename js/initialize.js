@@ -569,8 +569,13 @@ if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localS
     } else {
         document.documentElement.classList.remove('dark')
     }
-initializePage();
+
+document.addEventListener('DOMContentLoaded', function() {
+  initializePage();
+});
+
 async function initializePage() {
+  initializeLanguage();
         //$("#mainLayout").removeClass("flex").addClass("hidden");
 	account = await checkUser();
     handlePageID();
