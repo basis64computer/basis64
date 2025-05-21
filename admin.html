@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html class="" x-data="data()" lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <title>Administrator Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.12.1/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./dist/output.css" />
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <script src="./assets/js/init-alpine.js"></script>
+  </head>
+  <body>
+    <div class="flex h-screen bg-gray-50 dark:bg-neutral-900" :class="{ 'overflow-hidden': isSideMenuOpen }" id="pageContent">
+      <!-- Desktop sidebar -->
+      <!-- Mobile sidebar -->
+      <!-- Backdrop -->
+      <aside class="inset-y-0 z-20 flex-shrink-0 w-64 overflow-y-auto bg-white dark:bg-neutral-800 border-r dark:border-red" x-show="isSideMenuOpen" x-transition:enter="transition ease-in-out duration-15" x-transition:enter-start="opacity-0 transform -translate-x-20" x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in-out duration-15" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0 transform -translate-x-20">
+        <div class="py-4 text-gray-500 dark:text-gray-400">
+          <a class="ml-6 text-lg font-bold text-gray-800 dark:text-gray-200 flex items-center" href="#">
+            <img src="./assets/img/logo.png" width="48px" height="48px" alt="main_logo"> BASIS-64 </a>
+          <ul class="mt-6" id="default-styled-tab" data-tabs-toggle="#default-styled-tab-content" data-tabs-active-classes="text-primary-600 hover:text-primary-600 dark:text-primary-500 dark:hover:text-primary-500 border-primary-600 dark:border-primary-500" data-tabs-inactive-classes="dark:border-transparent text-gray-500 hover:text-gray-600 dark:text-gray-400 border-gray-100 hover:border-gray-300 dark:border-gray-700 dark:hover:text-gray-300" role="tablist">
+            <li class="relative px-6 py-3" role="presentation">
+              <!--span class="absolute inset-y-0 left-0 w-1 bg-primary-600 rounded-tr-lg rounded-br-lg" aria-hidden="true"></span-->
+              <button class="inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-200" id="home-tab" data-tabs-target="#home-content" type="button" role="tab" aria-controls="home" aria-selected="false">
+                <i class="bi bi-house-fill"></i>
+                <span class="ml-4">Home</span>
+              </button>
+            </li>
+            <li class="relative px-6 py-3" role="presentation">
+              <button class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200" id="log-tab" data-tabs-target="#log-content" type="button" role="tab" aria-controls="log" aria-selected="false">
+                <i class="bi bi-terminal-fill"></i>
+                <span class="ml-4">System Log</span>
+              </button>
+            </li>
+            <li class="relative px-6 py-3" role="presentation">
+              <button class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200" id="notification-tab" data-tabs-target="#notification-content" type="button" role="tab" aria-controls="notification" aria-selected="false">
+                <i class="bi bi-bell-fill"></i>
+                <span class="ml-4">Notification</span>
+              </button>
+            </li>
+            <li class="relative px-6 py-3" role="presentation">
+              <button class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200" id="session-tab" data-tabs-target="#session-content" type="button" role="tab" aria-controls="session" aria-selected="false">
+                <i class="bi bi-people-fill"></i>
+                <span class="ml-4">User & session</span>
+              </button>
+            </li>
+            <li class="relative px-6 py-3" role="presentation">
+              <button class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200" id="database-tab" data-tabs-target="#database-content" type="button" role="tab" aria-controls="database" aria-selected="false">
+                <i class="bi bi-database-fill"></i>
+                <span class="ml-4">Database</span>
+              </button>
+            </li>
+            <li class="relative px-6 py-3" role="presentation">
+              <button class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200" id="ban-tab" data-tabs-target="#ban-content" type="button" role="tab" aria-controls="ban" aria-selected="false">
+                <i class="bi bi-ban"></i>
+                <span class="ml-4">Ban users</span>
+              </button>
+            </li>
+            <li class="relative px-6 py-3" role="presentation">
+              <button class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200" id="security-tab" data-tabs-target="#security-content" type="button" role="tab" aria-controls="security" aria-selected="false">
+                <i class="bi bi-key-fill"></i>
+                <span class="ml-4">Security</span>
+              </button>
+            </li>
+            <li class="relative px-6 py-3" role="presentation">
+              <button class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200" id="menu-tab" data-tabs-target="#menu-content" type="button" role="tab" aria-controls="menu" aria-selected="false">
+                <i class="bi bi-grid-fill"></i>
+                <span class="ml-4">Menu Configuration</span>
+              </button>
+            </li>
+            <li class="relative px-6 py-3" role="presentation">
+              <a class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200" href="index.html">
+                <i class="bi bi-box-arrow-left"></i>
+                <span class="ml-4">Logout</span>
+              </a>
+            </li>
+
+          </ul>
+          <div class="px-6 my-6"></div>
+        </div>
+      </aside>
+      <div class="flex flex-col flex-1 w-full h-full">
+        <header class="z-10 py-4 bg-white border-b dark:bg-neutral-800" id="navbar"></header>
+        <main class="flex flex-col h-full overflow-y-auto">
+          <div class="container px-6 mx-auto grid hidden" id="searchLayout"></div>
+          <div class="container p-4 mx-auto grid" id="default-styled-tab-content">
+
+            <div class="hidden" id="home-content" role="tabpanel" aria-labelledby="home-tab">
+              <div class="flex items-center p-4 bg-white shadow-xs dark:bg-neutral-800 border">
+                <div class="p-3 mr-4 text-orange-500 bg-orange-100 rounded-full px-4 dark:text-orange-100 dark:bg-orange-500">
+                  <i class="bi bi-info-square-fill"></i>
+                </div>
+                <div>
+                  <p class="text-lg font-semibold text-gray-700 dark:text-gray-200">Shortcut</p>
+                  <p class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400">Gunakan shortcut di bawah ini.</p>
+                </div>
+              </div>
+              <div class="grid gap-6 mb-8 mt-4 md:grid-cols-1 xl:grid-cols-3">
+                <a href="https://dash.cloudflare.com/" target="_blank" class="bg-white border border-gray-200 shadow-sm dark:bg-neutral-800 dark:border-gray-700 border">
+                  <img class="object-cover w-full h-48" src="./assets/img/cloudflare-background.webp" alt="" />
+                  <div class="p-5">
+                    <h4 class="mb-2 text-2md font-bold tracking-tight text-gray-900 dark:text-white">Cloudflare Dasboard</h4>
+                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Buka dashboard Cloudflare di sini untuk mengakses Cloudflare Workers dan KV.</p>
+                  </div>
+                </a>
+                <a href="https://www.github.com/basis64computer/basis64" target="_blank" class="bg-white border border-gray-200 shadow-sm dark:bg-neutral-800 dark:border-gray-700 border">
+                  <img class="object-cover w-full h-48" src="./assets/img/github-background.webp" alt="" />
+                  <div class="p-5">
+                    <h4 class="mb-2 text-2md font-bold tracking-tight text-gray-900 dark:text-white">GitHub</h4>
+                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Buka dashboard GitHub BASIS-64 di sini untuk meng-update website ini.</p>
+                  </div>
+                </a>
+                <a href="#" onclick="tabs.show('session')" class="bg-white border border-gray-200 shadow-sm dark:bg-neutral-800 dark:border-gray-700 border" data-tabs-target="#session-content" type="button" role="tab" aria-controls="session" aria-selected="false">
+                  <img class="object-cover w-full h-48" src="./assets/img/security-background.jpg" alt="" />
+                  <div class="p-5">
+                    <h4 class="mb-2 text-2md font-bold tracking-tight text-gray-900 dark:text-white">Sesi & Login</h4>
+                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Lihat aktivitas login dan sesi pengguna.</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <div class="hidden" id="notification-content" role="tabpanel" aria-labelledby="notification-tab">
+              <div class="flex items-center p-4 mb-4 bg-white shadow-xs dark:bg-neutral-800 border">
+                <div class="p-3 mr-4 text-green-500 bg-green-100 rounded-full px-4 dark:text-green-100 dark:bg-green-500">
+                  <i class="bi bi-bell-fill"></i>
+                </div>
+                <div>
+                  <p class="text-lg font-semibold text-gray-700 dark:text-gray-200">Notifikasi</p>
+                  <p class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400">Pesan dan permintaan notifikasi akan masuk ke sini.</p>
+                </div>
+              </div>
+
+              <a class="flex items-start justify-start w-full p-4 mb-4 bg-white shadow-xs dark:bg-neutral-800 border" href="#message">
+                <img src="assets/img/user.png" class="rounded-full w-12 me-4">
+                <div>
+                  <p class="text-lg font-semibold text-gray-700 dark:text-gray-200">Coming Soon</p>
+                  <p class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400">Fitur ini belum dibuat.</p>
+                </div>
+              </a>
+            </div>
+
+            <div class="hidden" id="log-content" role="tabpanel" aria-labelledby="log-tab">
+              <div class="flex items-center p-4 bg-white shadow-xs dark:bg-neutral-800 border">
+                <div class="p-3 mr-4 text-gray-500 bg-gray-100 rounded-full px-4 dark:text-gray-100 dark:bg-neutral-500">
+                  <i class="bi bi-terminal-fill"></i>
+                </div>
+                <div>
+                  <p class="text-lg font-semibold text-gray-700 dark:text-gray-200">System Log</p>
+                  <p class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400" id="systemLogStatus">System log status.</p>
+                </div>
+              </div>
+
+              <textarea id="systemLogText" rows="20" class="block p-2.5 w-full outline-none text-sm text-white font-mono bg-black border border-gray-300 dark:bg-neutral-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white" placeholder="The log should be written here..." readonly></textarea>
+            </div>
+
+            <div class="hidden p-4 mb-2 bg-white bg-white border dark:bg-neutral-800" id="session-content" role="tabpanel" aria-labelledby="session-tab">
+
+              <table id="sessionTable" class="mt-4">
+                  <thead>
+                      <tr>
+                          <th>
+                              <span class="flex items-center">
+                                  No
+                              </span>
+                          </th>
+                          <th>
+                              <span class="flex items-center">
+                                  Photo
+                              </span>
+                          </th>
+                          <th>
+                              <span class="flex items-center">
+                                  User
+                              </span>
+                          </th>
+                          <th>
+                              <span class="flex items-center">
+                                  Session
+                              </span>
+                          </th>
+                          <th>
+                              <span class="flex items-center">
+                                  Device
+                              </span>
+                          </th>
+                      </tr>
+                  </thead>
+                  <tbody id="sessionTableBody">
+
+                  </tbody>
+              </table>
+
+
+            </div>
+
+            <div class="hidden p-4 mb-2 bg-white bg-white border dark:bg-neutral-800" id="database-content" role="tabpanel" aria-labelledby="database-tab">
+
+              <table id="databaseTable" class="mt-4">
+                  <thead>
+                      <tr>
+                          <th>
+                              <span class="flex items-center">
+                                  No
+                              </span>
+                          </th>
+                          <th>
+                              <span class="flex items-center">
+                                  Email
+                              </span>
+                          </th>
+                      </tr>
+                  </thead>
+                  <tbody id="databaseTableBody">
+
+                  </tbody>
+              </table>
+
+
+            </div>
+
+            <div class="hidden" id="ban-content" role="tabpanel" aria-labelledby="ban-tab">
+              <div class="flex items-center p-4 mb-4 bg-white shadow-xs dark:bg-neutral-800 border">
+                <div class="p-3 mr-4 text-red-500 bg-red-100 rounded-full px-4 dark:text-red-100 dark:bg-red-500">
+                  <i class="bi bi-ban"></i>
+                </div>
+                <div>
+                  <p class="text-lg font-semibold text-gray-700 dark:text-gray-200">Blacklist Pengguna</p>
+                  <p class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400">Lakukan ban pengguna di sini.</p>
+                </div>
+              </div>
+
+              <div class="w-full p-4 mb-4 bg-white shadow-xs dark:bg-neutral-800 border">
+                <div class="mb-4">
+				    <label for="inputBannedEmail" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Banned emails</label>
+				    <input type="text" id="inputBannedEmail" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-neutral-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
+				</div>
+				<button type="button" class="w-full text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800" onclick="confirmModal('Simpan Konfigurasi', 'Apakah kamu ingin menyimpan kofigurasi ini?', 'Simpan', saveBannedUsers)">Simpan konfigurasi</button>
+              </div>
+              
+            </div>
+
+            <div class="hidden" id="security-content" role="tabpanel" aria-labelledby="security-tab">
+              <div class="flex items-center p-4 mb-4 bg-white shadow-xs dark:bg-neutral-800 border">
+                <div class="p-3 mr-4 text-primary-500 bg-primary-100 rounded-full px-4 dark:text-primary-100 dark:bg-primary-500">
+                  <i class="bi bi-key-fill"></i>
+                </div>
+                <div>
+                  <p class="text-lg font-semibold text-gray-700 dark:text-gray-200">Security</p>
+                  <p class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400">Pengaturan keamanan dan kata sandi.</p>
+                </div>
+              </div>
+
+              <div class="w-full p-4 mb-4 bg-white shadow-xs dark:bg-neutral-800 border">
+              	<label for="inputAdminUsername1" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Admin 1</label>
+				<input type="text" id="inputAdminUsername1" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-neutral-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 mb-2" placeholder="username">
+				<input type="text" id="inputAdminPassword1" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-neutral-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="password">
+              	<hr class="my-4" />
+              	<label for="inputAdminUsername2" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Admin 2</label>
+				<input type="text" id="inputAdminUsername2" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-neutral-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 mb-2" placeholder="username">
+				<input type="text" id="inputAdminPassword2" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-neutral-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="password">
+              	<hr class="my-4" />
+                <div class="flex justify-end">
+                	<button type="button" class="py-2.5 px-5 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-neutral-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" onclick="initializeSecurity()">Reset</button>
+                	<button type="button" class="text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800" onclick="confirmModal('Simpan Konfigurasi', 'Apakah kamu ingin menyimpan kofigurasi ini?', 'Simpan', saveSecurityConfiguration)">Simpan</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="hidden" id="menu-content" role="tabpanel" aria-labelledby="menu-tab">
+              <div class="flex items-center p-4 mb-4 bg-white shadow-xs dark:bg-neutral-800 border">
+                <div class="p-3 mr-4 text-indigo-400 bg-indigo-100 rounded-full px-4 dark:text-indigo-100 dark:bg-indigo-400">
+                  <i class="bi bi-filetype-json"></i>
+                </div>
+                <div>
+                  <p class="text-lg font-semibold text-gray-700 dark:text-gray-200">Menu Configuration</p>
+                  <p class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400">Konfigurasi menu di sini.</p>
+                </div>
+              </div>
+
+              <textarea id="jsonEditor" rows="20" class="block p-2.5 w-full outline-none text-sm text-white font-mono bg-black border border-gray-300 dark:bg-neutral-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white" placeholder="The JSON configuration should be written here..."></textarea>
+              <div class="md:inline-flex w-full p-2 mb-4 bg-white shadow-xs dark:bg-neutral-800 border" id="editorPosition">
+              </div>
+
+              <div class="md:inline-flex w-full p-4 mb-4 bg-white shadow-xs dark:bg-neutral-800 border">
+                <p id="jsonResult" class="flex-1">Result: </p>
+                <button type="button" class="max-sm:w-full text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800" onclick="confirmModal('Simpan Konfigurasi', 'Apakah kamu ingin menyimpan kofigurasi ini?', 'Simpan', saveEditor)">Simpan</button>
+
+              </div>
+            </div>
+
+
+
+
+          </div>
+
+          <div class="h-full"></div>
+          <footer class="bg-white border-t dark:bg-neutral-800 inset-x-0 bottom-0" id="footer"></footer>
+        </main>
+      </div>
+    </div>
+    <!-- Message modal -->
+    <div id="messageModal" tabindex="-1" aria-hidden="true" class="hidden overlay modal overflow-y-auto overflow-x-hidden fixed z-50 justify-center items-center w-full inset-0 h-[calc(100%)] max-h-full bg-black bg-opacity-50"></div>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <script src="js/simple-datatables.min.js" crossorigin="anonymous"></script>
+    <script src="js/i18next.min.js"></script>
+    <script src="js/i18nextHttpBackend.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+    <script src="js/icons.js"></script>
+    <script src="js/cookie.js"></script>
+    <script src="js/visitor.js"></script>
+    <script src="js/encrypt.js"></script>
+    <script src="js/initialize.js"></script>
+    <script src="js/i18n.js"></script>
+    <script type="text/javascript">
+      let page_id = "admin";
+      isAdminPage = true;
+      let tabs;
+      let selectedEmail = "";
+
+
+      /*
+             * Tabel pada layout sesi dan login
+             */
+      const sessionTable = document.getElementById("sessionTable");
+      const sessionTableBody = document.getElementById("sessionTableBody");
+      const inputBannedEmail = document.getElementById("inputBannedEmail");
+      const inputBannedDevice = document.getElementById("inputBannedDevice");
+      const inputBannedUserAgent = document.getElementById("inputBannedUserAgent");
+
+      const inputAdminUsername1 = document.getElementById('inputAdminUsername1');
+            const inputAdminUsername2 = document.getElementById('inputAdminUsername2');
+            const inputAdminPassword1 = document.getElementById('inputAdminPassword1');
+            const inputAdminPassword2 = document.getElementById('inputAdminPassword2');
+
+            const jsonEditor = document.getElementById('jsonEditor');
+            const jsonResult = document.getElementById('jsonResult');
+
+      /*
+             * Loop untuk system log
+             */
+            async function systemLogLoop() {
+                const systemLogStatus = document.getElementById("systemLogStatus");
+                const systemLogText = document.getElementById("systemLogText");
+                console.log(document.getElementById('log-content'));
+                try {
+                	if (document.getElementById('log-content').className.contains('hidden')) {
+	                    console.log(systemLogStatus);
+	                    systemLogText.value = "";
+	                    systemLogStatus.hidden = true;
+	                    return;
+	                }
+	            } catch (error) {
+
+	            }
+
+	            try {
+	            	systemLogStatus.hidden = false;
+	                systemLogStatus.innerHTML = `Fetching data...`;
+	                let response = await fetch("https://api.npoint.io/1ccb378facadf1e40ee0");
+	                let json = await response.json();
+	                console.log(json);
+	                systemLogText.value = await decryptAES(adminData.serverKey, json.ciphertext, adminData.serverIV);
+	                systemLogStatus.innerHTML = 'System log loaded';
+	            } catch (error) {
+	            	systemLogStatus.innerHTML = error.message;
+	            }
+
+            }
+
+      /*
+             * Fungsi pada layout sesi dan login
+             */
+            function initializeSessionLayout() {
+                console.log(adminData);
+
+                /*
+                 * Memuat tabel
+                 */
+                let sessionKeys = Object.keys(adminData.session);
+                for (var i = 0; i < sessionKeys.length; i++) {
+                    let data = adminData.session[sessionKeys[i]];
+                    let user = data.account;
+                    let photo = (user)?user.photo:null;
+                    let device = data.device;
+                    let emailColumn = user?`Email: ${user.email}<br/>Nama: ${user.name}`:'Pengguna tidak melakukan login';
+                    let sessionColumn = `Session ID: ${sessionKeys[i]}<br/>Awal sesi: ${formatDate(new Date(data.expired - (24*3600*1000)), "dddd, dd MMMM yyyy - HH:mm:ss")}<br/>Akhir sesi: ${formatDate(new Date(data.expired), "dddd, dd MMMM yyyy - HH:mm:ss")}`;
+                    let deviceColumn = device?(`Device ID: ${device.id?device.id:"N/a"}<br/>IP Address: ${device.ip}<br/>Region: ${device.city}, ${device.region}, ${device.country}<br/>User agent: ${device.userAgent}`):"N/a";
+                    insertRow(sessionTableBody, [i+1, `<img class="border rounded ratio ratio 1x1" src="${photo?photo:'assets/img/user.png'}" style="width: 128px" onclick="photoModal(this.src.replace('s96-c', 's384-c', true))"/>`, emailColumn, sessionColumn, deviceColumn]);
+                }
+                //insertRow(sessionTableBody, [1, `Email: rusdingawitukangcukur123@gmail.com<br/>Nama: Rusdi Ngawi Tukang Cukur Tampan`, `Session ID: rusdingawitukangcukur123<br/>Awal sesi: Selasa, 18 Maret 2025 - 07:30:54<br/>Akhir sesi: Rabu, 19 Maret 2025 - 07:30:54<br/><br/>`, `Device ID: PC-1234567890<br/>IP address: 10.92.100.124<br/>Region: Ngawi, East Java, ID<br/>User agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36`])
+                //new simpleDatatables.DataTable(sessionTable);
+
+                inputBannedEmail.value = adminData.config.sessionConfig.bannedEmail;
+                //inputBannedDevice.value = adminData.config.sessionConfig.bannedDevice;
+                //inputBannedUserAgent.value = adminData.config.sessionConfig.bannedUserAgent;
+
+
+                /*
+                 * Memuat konfigurasi lainnya
+                 */ 
+            }
+
+            /*
+             * Fungsi pada layout database
+             */
+            async function initializeDatabase() {
+                let databaseTable = document.getElementById("databaseTable");
+                let json = adminData.accountList;
+                json = json.filter(e => e !== 'last_id');
+                json = json.filter(e => e !== 'premium_pages');
+
+                console.log(json.length);
+                var j = 1;
+                for (var i = 0; i<json.length; i++) {
+                    name = json[i].name;
+                    if (isEmail(name)) {
+                        addTable(j, name);
+                        j++;
+                    }
+                }
+                new simpleDatatables.DataTable(databaseTable);
+            }
+
+            /*
+             * Fungsi pada layout keamanan
+             */
+            function getCursorLineAndColumn(textarea) {
+	            const textBeforeCursor = textarea.value.substring(0, textarea.selectionStart);
+	            const lines = textBeforeCursor.split('\n');
+
+	            const lineNumber = lines.length; // Baris dimulai dari 1
+	            const columnNumber = lines[lines.length - 1].length; // Kolom dimulai dari 0
+
+	            return {
+	                line: lineNumber,
+	                column: columnNumber
+	            };
+	        }
+            function initializeEditor() {
+                jsonEditor.value = JSON.stringify(adminData.config.menuConfig, null, 2);
+
+				  // Opsional: Mendengarkan event 'keyup' atau 'click' untuk update real-time
+				  $('#jsonEditor').on('keyup click', function() {
+				    const textarea = this; // 'this' dalam event handler jQuery merujuk ke elemen DOM
+				    const pos = getCursorLineAndColumn(textarea);
+				    $('#editorPosition').text(`Baris ${pos.line}, Kolom ${pos.column+1}`);
+				  });
+            }
+
+            /*
+             * Fungsi pada layout editor JSON
+             */
+            function initializeSecurity() {
+                inputAdminUsername1.value = adminData.config.securityConfig.admin1.username;
+                inputAdminPassword1.value = adminData.config.securityConfig.admin1.password;
+
+                inputAdminUsername2.value = adminData.config.securityConfig.admin2.username;
+                inputAdminPassword2.value = adminData.config.securityConfig.admin2.password;
+            }
+
+      async function callback() {
+        document.getElementById('systemLogText').value = ``
+        const tabsElement = document.getElementById('default-styled-tab');
+
+        const tabElements = [
+            {
+                id: 'home',
+                triggerEl: document.querySelector('#home-tab'),
+                targetEl: document.querySelector('#home-content'),
+            },
+            {
+                id: 'log',
+                triggerEl: document.querySelector('#log-tab'),
+                targetEl: document.querySelector('#log-content'),
+            },
+            {
+                id: 'notification',
+                triggerEl: document.querySelector('#notification-tab'),
+                targetEl: document.querySelector('#notification-content'),
+            },
+            {
+                id: 'session',
+                triggerEl: document.querySelector('#session-tab'),
+                targetEl: document.querySelector('#session-content'),
+            },
+            {
+                id: 'ban',
+                triggerEl: document.querySelector('#ban-tab'),
+                targetEl: document.querySelector('#ban-content'),
+            },
+            {
+                id: 'security',
+                triggerEl: document.querySelector('#security-tab'),
+                targetEl: document.querySelector('#security-content'),
+            },
+            {
+                id: 'menu',
+                triggerEl: document.querySelector('#menu-tab'),
+                targetEl: document.querySelector('#menu-content'),
+            }
+        ];
+
+        const options = {
+            defaultTabId: 'home', // Set tab IPv4 sebagai aktif pertama
+            activeClasses:
+                'text-primary-600 hover:text-primary-600 dark:text-primary-500 dark:hover:text-primary-500 border-primary-600 dark:border-primary-500',
+            inactiveClasses:
+                'dark:border-transparent text-gray-500 hover:text-gray-600 dark:text-gray-400 border-gray-100 hover:border-gray-300 dark:border-gray-700 dark:hover:text-gray-300',
+            onShow: () => {
+                console.log('tab is shown');
+            },
+        };
+
+        const instanceOptions = {
+            id: 'default-styled-tab',
+            override: true
+        };
+
+        tabs = new Tabs(tabsElement, tabElements, options, instanceOptions);
+
+        let json = await serverRequest('get-admin-data', {});
+                //console.log(json);
+                adminData = json.data;
+
+        try {
+        	initializeSessionLayout();
+	        initializeSecurity();
+	        initializeEditor();
+	        initializeDatabase();
+        } catch (error) {
+        	callbackMessageModal('Hanya administrator yang dapat mengakses halaman ini.<br/>Only administrators are allowed to access this page.<br/><br/>GET OUT!', getOut);
+        }
+
+            const dataTable = new simpleDatatables.DataTable("#sessionTable", {
+                searchable: true,
+                sortable: false
+            });
+
+            setInterval(systemLogLoop, 3000);
+
+      }
+
+      function reload() {
+      	window.location.reload();
+      }
+
+      function getOut() {
+      	window.location.replace('index.html');
+      }
+
+      /*
+             * Menambahkan baris pada table
+             */
+            function insertRow(tableBody, tableData) {
+                let columns = "";
+                for (var i = 0; i < tableData.length; i++) {
+                    columns += `<td>${tableData[i]}</td>`;
+                }
+                tableBody.innerHTML += `<tr>${columns}</tr>`;
+            }
+
+            async function deleteAdminAccount() {
+              //console.log(userEditEmail.value.trim());
+                let response = await serverRequest('remove-account', {email: selectedEmail.trim()});
+                if (!response.ok) {
+                    messageModal('Tidak dapat menghapus akun pengguna.<br/>Error: ' + JSON.stringify(response.json));
+                } else {
+                    callbackMessageModal('Berhasil menghapus akun pengguna.', reload);
+                }
+            }
+
+            function addTable(number, name) {
+                let databaseTableBody = document.getElementById("databaseTableBody")
+                let tr = document.createElement("tr");
+                //tr.setAttribute("onclick", "console.log('asdf')");
+                console.log("add: " + number + " " + name)
+                let td = document.createElement("td");
+                td.innerHTML = number;
+                tr.appendChild(td);
+                let td2 = document.createElement("td");
+                td2.innerHTML = `<button class="btn shadow-none text-start" style="width: 100%;" onclick="editUser('` + name + `')">` + name + `</button>`;
+                tr.appendChild(td2);
+                databaseTableBody.appendChild(tr);
+            }
+
+            function formatTimestampToDate(timestamp) {
+                const date = new Date(timestamp); // Create a Date object from the timestamp
+                const year = date.getFullYear(); // Get the year
+                const month = String(date.getMonth() + 1).padStart(2, '0'); // Get the month (0-11), add 1, and pad with 0 if needed
+                const day = String(date.getDate()).padStart(2, '0'); // Get the day and pad with 0 if needed
+
+                return `${year}-${month}-${day}`; // Format as YYYY-MM-DD
+            }
+
+            function convertDateToTimestamp(dateString) {
+                // Create a Date object from the date string
+                const date = new Date(dateString);
+                
+                // Get the timestamp in milliseconds
+                const timestamp = date.getTime();
+                
+                return timestamp; // Returns the timestamp
+            }
+
+            async function editUser(user) {
+                let resultjson = await serverRequest('get-user', {email: user});
+                let account = resultjson.data;
+                selectedEmail = account.email;
+                customModal(`<div class="relative p-4 w-full max-w-2xl max-h-full">
+        <!-- Modal content -->
+        <div class="relative bg-white rounded-lg shadow-sm dark:bg-neutral-700">
+            <!-- Modal header -->
+            <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600 border-gray-200">
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+                    Informasi Pengguna
+                </h3>
+                <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-dismiss-modal="true">
+                    <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                    </svg>
+                    <span class="sr-only">Close</span>
+                </button>
+            </div>
+            <!-- Modal body -->
+            <div class="w-full p-4 md:p-5 space-y-4 md:inline-flex">
+            	<div class="flex-1 h-full">
+            		<img class="h-full m-4 border rounded-lg" src="${account.photo.replace("s96-c", "s384-c", true)}"/>
+            	</div>
+            	<div class="flex-1">
+            		 <div class="mb-5">
+					      <label for="userEditName" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nama Pengguna</label>
+					      <input type="text" id="userEditName" class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-neutral-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" value="${account.name}" readonly>
+					  </div>
+					 <div class="mb-5">
+					      <label for="userEditEmail" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email Pengguna</label>
+					      <input type="text" id="userEditEmail" class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-neutral-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" value="${account.email}" readonly>
+					  </div>
+					  <div class="mb-5">
+					  		<label for="userEditActivationLevel" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Level Aktivasi</label>
+						  <select id="userEditActivationLevel" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-neutral-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+						    <option value="0" ${account.activation_level==0?'selected':''}>Level 0</option>
+						    <option value="1" ${account.activation_level==1?'selected':''}>Level 1</option>
+						    <option value="2" ${account.activation_level==2?'selected':''}>Level 2</option>
+						    <option value="3" ${account.activation_level==3?'selected':''}>Level 3</option>
+						  </select>
+					  </div>
+					  <div class="mb-5">
+					      <label for="userEditEmail" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Batas Aktivasi</label>
+					      <input type="date" id="userEditActivationDate" class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-neutral-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" value="${formatTimestampToDate(account.activation_expired)}">
+					  </div>
+					  <div class="mb-5">
+					  	<button type="button" class="w-full focus:outline-none text-white bg-red-600 hover:bg-red-700 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900" onclick="confirmModal('Hapus Akun', 'Apakah kamu ingin menghapus akun ini?', 'Hapus', deleteAdminAccount)">Hapus akun</button>
+					  </div>
+            	</div>
+            </div>
+            <!-- Modal footer -->
+<div class="w-full flex justify-end p-4 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600">
+  <button data-dismiss-modal="true" type="button" class="py-2.5 px-5 me-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-neutral-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" data-i18n="messages.close">
+    Tutup
+  </button>
+  <button type="button" class="py-2.5 px-5 text-sm font-medium text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800" onclick="activate()">Simpan</button>
+</div>
+
+        </div>
+    </div>`);
+                //console.log(parseInt(document.getElementById("userEditActivationLevel").value));
+            }
+
+            async function activate() {
+                let response = await serverRequest("activate", {email: $('#userEditEmail').val(), activation_level: parseInt($('#userEditActivationLevel').val()), timestamp: convertDateToTimestamp($('#userEditActivationDate').val())});
+                loadingModal('Menyimpan...');
+                console.log(response);
+                if (response.ok) {
+                  messageModal('Berhasil mengaktivasi pengguna.');
+                } else {
+                  messageModal('Tidak dapat mengaktivasi pengguna.');
+                }
+            }
+
+            async function saveBannedUsers() {
+            	adminData.config.sessionConfig.bannedEmail = inputBannedEmail.value;
+            	await saveConfiguration();
+            }
+
+            async function saveSecurityConfiguration() {
+                adminData.config.securityConfig.admin1.username = inputAdminUsername1.value;
+                adminData.config.securityConfig.admin1.password = inputAdminPassword1.value;
+
+                adminData.config.securityConfig.admin2.username = inputAdminUsername2.value;
+                adminData.config.securityConfig.admin2.password = inputAdminPassword2.value;
+
+                await saveConfiguration();
+            }
+
+            async function saveEditor() {
+                try {
+                	adminData.config.menuConfig = JSON.parse(jsonEditor.value);
+                	await saveConfiguration();
+                	jsonResult.innerHTML = "Result: Configuration saved.";
+                } catch (error) {
+                	jsonResult.innerHTML = "Result: " + error.message;
+                }
+            }
+
+
+            async function saveConfiguration() {
+              let json = await serverRequest('save-config', {config: adminData.config});
+              if (json.ok) {
+                messageModal('Konfigurasi tersimpan.');
+              } else {
+                messageModal('Tidak dapat menyimpan kofigurasi');
+              }
+            }
+    </script>
+  </body>
+</html>
