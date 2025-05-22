@@ -365,9 +365,8 @@
 	                systemLogStatus.innerHTML = `Fetching data...`;
 	                let response = await fetch("https://api.npoint.io/1ccb378facadf1e40ee0");
 	                let json = await response.json();
-	                console.log(json);
-	                systemLogText.value = await decryptAES(adminData.serverKey, json.ciphertext, adminData.serverIV);
-	                systemLogStatus.innerHTML = 'System log loaded';
+	                systemLogText.value = await decryptAES(adminData.serverKey, json.ciphertext, stringToUint8Array(adminData.serverIV));
+	                systemLogStatus.innerHTML = 'System log loaded.';
 	            } catch (error) {
 	            	systemLogStatus.innerHTML = error.message;
 	            }
