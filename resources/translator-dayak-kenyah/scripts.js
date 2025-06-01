@@ -490,6 +490,8 @@ let read02;
 let translateInput;
 let translateOutput;
 
+let switchLanguage = false;
+
 
 
 /*
@@ -563,7 +565,7 @@ async function translateText() {
 
     let response = await fetch("https://dayakkenyahtranslator.basis64computer.workers.dev/", { 
           method: 'POST',
-          body: JSON.stringify({action: "translate", session_id: getCookie("session_id"), data: {translate: inputText}})
+          body: JSON.stringify({action: "translate", session_id: getCookie("session_id"), data: {translate: inputText}, invert: switchLanguage})
         });
     let result = await response.json();
     if (result.result.trim() != "") {
@@ -605,10 +607,10 @@ let debounceTimer;
 
 export function init() {
   document.getElementById('mainLayout').innerHTML = `
-  <div class="block p-6 mb-4 bg-white border border-gray-200 shadow-sm dark:bg-neutral-800 dark:border-gray-700">
-    <p class="w-full font-normal text-gray-700 dark:text-gray-400">Fitur penerjemahan Dayak Kenyah ke Indonesia paling lambat akan dirilis pada jam 18:00.</p>
-</div>
 <div class="block p-6 bg-white border border-gray-200 shadow-sm dark:bg-neutral-800 dark:border-gray-700">
+<button class="text-gray-900 w-full align-middle justify-between mb-4 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 text-xl text-sm px-5 py-2.5 me-2 mb-2 dark:bg-neutral-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700" id="switchLanguageButton">
+                            Beralih bahasa <i class="bi bi-arrow-left-right"></i>
+                        </button>
     <div class="grid lg:grid-cols-2 gap-4">
         <div class="border p-4">
             <div class="">
@@ -668,7 +670,7 @@ export function init() {
   `;
     //dictionaryTable = document.getElementById("dictionaryTable");
     //dictionaryTableBody = document.getElementById("dictionaryTableBody");
-    //switchLanguageButton = document.getElementById("switchLanguageButton");
+    switchLanguageButton = document.getElementById("switchLanguageButton");
     inputTitle = document.getElementById("inputTitle");
     outputTitle = document.getElementById("outputTitle");
     copy01 = document.getElementById("copy01");
@@ -681,7 +683,13 @@ export function init() {
 
     translateInput.value = "";
     translateOutput.value = "";
-    let switchLanguage = false;
+
+    switchLanguageButton.addEventListener("click", function(argument) {
+        // Select the text field
+        switchLanguage = !switchLanguage;
+        inputTitle.innerHTML = switchLanguage?"Dayak Kenyah":"Indonesia";
+        outputTitle.innerHTML = !switchLanguage?"Dayak Kenyah":"Indonesia";
+    }, false);
 
     copy01.addEventListener("click", function(argument) {
         // Select the text field
