@@ -605,6 +605,9 @@ let debounceTimer;
 
 export function init() {
   document.getElementById('mainLayout').innerHTML = `
+  <div class="block p-6 bg-white border border-gray-200 shadow-sm dark:bg-neutral-800 dark:border-gray-700">
+    <p class="w-full font-normal text-gray-700 dark:text-gray-400">Fitur penerjemahan Dayak Kenyah ke Indonesia akan dirilis pada jam 18:00.</p>
+<div/>
 <div class="block p-6 bg-white border border-gray-200 shadow-sm dark:bg-neutral-800 dark:border-gray-700">
     <div class="grid lg:grid-cols-2 gap-4">
         <div class="border p-4">
