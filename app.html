@@ -64,11 +64,56 @@
           
         </script>
         <script type="text/javascript">
+          let activationStatusInitialized = false;
+
+          function getMenuById(id) {
+              return pagesMenu.find(item => item.id === id);
+          }
+
           let page_id = "app";
+          let page;
+
+
+          function loginPage() {
+            window.location.replace("login.html");
+          }
+
+          function indexPage() {
+            window.location.replace("index.html");
+          }
+
+          function initializeActivation() {
+            if (!page) {
+                    return;
+                }
+
+                if (!page.premium_level || page.premium_level == 0) {
+                    return;
+                }
+
+                if (account == null) {
+                  callbackMessageModal(`Silakan login menggunakan akun Google dan aktivasi akun kamu untuk mengakses fitur premuim pada website ini, hubungi admin untuk mengaktivasi akun kamu.<br/><br/>kamu dapat melihat daftar harganya <a href="activation.html" class="font-medium text-blue-600 underline dark:text-blue-500 hover:no-underline">di sini</a>`, indexPage);
+                    return;
+                }
+
+                if (account.activation_level && new Date(account.activation_expired).getTime() < new Date().getTime()) {
+                  callbackMessageModal(`Akun kamu sudah kadaluarsa, kamu dapat mengaktivasi kembali akun kamu dan hubungi admin untuk mengaktivasi akun kamu.<br/><br/>Kamu dapat melihat daftar harganya <a href="activation.html" class="font-medium text-blue-600 underline dark:text-blue-500 hover:no-underline">di sini</a>`, indexPage);
+                }
+
+                if (!account.activation_level) {
+                  callbackMessageModal(`Akun kamu belum diaktivasi, kamu dapat melihat daftar harganya <a href="activation.html" class="font-medium text-blue-600 underline dark:text-blue-500 hover:no-underline">di sini</a>`, indexPage);
+                }
+                //activationStatusInitialized = true;
+          }
           
           function callback() {
             const params = new URLSearchParams(window.location.search);
           const toolId = params.get('feature');
+
+            page = getMenuById(toolId);
+            initializeActivation();
+
+                
 
           let allowedModules = [];
           for (var i = 0; i < pagesMenu.length; i++) {

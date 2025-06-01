@@ -51,8 +51,8 @@
         <main class="flex flex-col h-full overflow-y-auto">
           <div class="container px-6 mx-auto grid hidden" id="searchLayout">
           </div>
-          <div class="container px-6 mx-auto grid" id="mainLayout">
-            <div class="flex items-center p-4 mt-4 bg-white rounded-lg shadow-xs dark:bg-neutral-800 border">
+          <div class="container p-4 mx-auto grid" id="mainLayout">
+            <div class="flex items-center p-4 bg-white shadow-sm dark:bg-neutral-800 border">
                 <div class="p-3 mr-4 text-orange-500 bg-orange-100 rounded-full px-4 dark:text-orange-100 dark:bg-orange-500">
                   <i class="bi bi-info-square-fill"></i>
                 </div>
@@ -64,9 +64,9 @@
               </div>
             <!-- CTA -->
             <!-- Cards -->
-            <div class="grid gap-6 mb-8 mt-4 md:grid-cols-1 xl:grid-cols-3">
+            <div class="grid gap-4 mb-4 mt-4 md:grid-cols-1 xl:grid-cols-3">
               <!-- Card -->
-              <div class="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-neutral-800 border">
+              <div class="flex items-center p-4 bg-white shadow-sm dark:bg-neutral-800 border">
                 <div class="p-3 mr-4 text-red-600 bg-red-100 rounded-full px-4 dark:text-red-100 dark:bg-red-600">
                   <i class="bi bi-people-fill"></i>
                 </div>
@@ -76,7 +76,7 @@
                 </div>
               </div>
               <!-- Card -->
-              <div class="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-neutral-800 border">
+              <div class="flex items-center p-4 bg-white shadow-sm dark:bg-neutral-800 border">
                 <div class="p-3 mr-4 text-orange-500 bg-orange-100 rounded-full px-4 dark:text-orange-100 dark:bg-orange-500">
                   <i class="bi bi-journals"></i>
                 </div>
@@ -86,7 +86,7 @@
                 </div>
               </div>
               <!-- Card -->
-              <div class="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-neutral-800 border">
+              <div class="flex items-center p-4 bg-white shadow-sm dark:bg-neutral-800 border">
                 <div class="p-3 mr-4 text-blue-500 bg-blue-100 rounded-full px-4 dark:text-blue-100 dark:bg-blue-500">
                   <i class="bi bi-speedometer2"></i>
                 </div>
@@ -100,7 +100,7 @@
             <hr/>
 
 
-            <div class="grid gap-6 mb-8 mt-4 md:grid-cols-1 xl:grid-cols-3" id="featureCards">
+            <div class="grid gap-4 mb-4 mt-4 md:grid-cols-1 xl:grid-cols-3" id="featureCards">
               <!-- Card -->
               
 
@@ -118,11 +118,12 @@
 
 
             </div>
+            <hr/>
 
 
 
 
-            <div class="flex-1 items-center p-4 mb-4 bg-white shadow-xs dark:bg-neutral-800 border text-center">
+            <div class="flex-1 items-center p-4 mt-4 mb-4 bg-white shadow-xs dark:bg-neutral-800 border text-center">
                   <svg class="w-10 h-10 mx-auto mb-3 text-gray-400 dark:text-gray-600" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 14">
         <path d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z"/>
     </svg>
@@ -194,6 +195,33 @@
             "physics": "bg-purple-100 text-purple-800 dark:bg-neutral-700 dark:text-purple-400 border-purple-400",
           }
 
+          function handleActivation(id) {
+            let page = pagesMenu.find(item => item.id === id);
+            if (!page) {
+                    window.location.assign(`app.html?feature=${id}`);
+                    return;
+                }
+
+                if (!page.premium_level || page.premium_level == 0) {
+                    window.location.assign(`app.html?feature=${id}`);
+                    return;
+                }
+
+                if (account == null) {
+                  messageModal(`Silakan login menggunakan akun Google dan aktivasi akun kamu untuk mengakses fitur premuim pada website ini, hubungi admin untuk mengaktivasi akun kamu.<br/><br/>kamu dapat melihat daftar harganya <a href="activation.html" class="font-medium text-blue-600 underline dark:text-blue-500 hover:no-underline">di sini</a>`);
+                    return;
+                }
+
+                if (account.activation_level && new Date(account.activation_expired).getTime() < new Date().getTime()) {
+                  messageModal(`Akun kamu sudah kadaluarsa, kamu dapat mengaktivasi kembali akun kamu dan hubungi admin untuk mengaktivasi akun kamu.<br/><br/>Kamu dapat melihat daftar harganya <a href="activation.html" class="font-medium text-blue-600 underline dark:text-blue-500 hover:no-underline">di sini</a>`);
+                }
+
+                if (!account.activation_level) {
+                  messageModal(`Akun kamu belum diaktivasi, kamu dapat melihat daftar harganya <a href="activation.html" class="font-medium text-blue-600 underline dark:text-blue-500 hover:no-underline">di sini</a>`);
+                }
+                window.location.assign(`app.html?feature=${id}`);
+          }
+
           async function initialize() {
                     listJson = pagesMenu;
 
@@ -213,7 +241,7 @@
                     let badgesIcon = "";
 
 
-                    let text = `<a href="app.html?feature=${id}" class="bg-white border border-gray-200 shadow-sm dark:bg-neutral-800 dark:border-gray-700 border">
+                    let text = `<a href="#" onclick="handleActivation('${id}')" class="bg-white border border-gray-200 shadow-sm dark:bg-neutral-800 dark:border-gray-700 border">
                       <img class="object-cover w-full h-48" src="${thumbnail}" alt="" />
                   <div class="p-5">
                           <h4 class="mb-2 text-2md font-bold tracking-tight text-gray-900 dark:text-white">${title}</h4>

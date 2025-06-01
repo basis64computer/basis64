@@ -566,11 +566,14 @@ async function translateText() {
           body: JSON.stringify({action: "translate", session_id: getCookie("session_id"), data: {translate: inputText}})
         });
     let result = await response.json();
-    document.getElementById('tableBody').innerHTML += `<tr class="bg-white border-b dark:bg-neutral-800 dark:border-gray-700 border-gray-200">
+    if (result.result.trim() != "") {
+        document.getElementById('tableBody').innerHTML += `<tr class="bg-white border-b dark:bg-neutral-800 dark:border-gray-700 border-gray-200">
                     <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"> ${num++} </th>
                     <td class="px-6 py-4"> ${translateInput.value} </td>
                     <td class="px-6 py-4"> ${result.result} </td>
-                </tr>`
+                </tr>`;
+    }
+    
     translateOutput.value = result.result;
 }
 
